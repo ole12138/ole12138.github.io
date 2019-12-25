@@ -1,2 +1,2 @@
-# Blog
-my blogs and some docs
+# ole12138.github.io
+my blogs, notes and some docs
