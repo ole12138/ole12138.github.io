@@ -1,1 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>向量值函数 on Jingmin's blog</title><link>https://ole12138.github.io/tags/%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0/</link><description>Recent content in 向量值函数 on Jingmin's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2020</copyright><lastBuildDate>Wed, 25 Nov 2020 05:24:48 +0800</lastBuildDate><atom:link href="https://ole12138.github.io/tags/%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0/feed.xml" rel="self" type="application/rss+xml"/><item><title>多元微积分-多元微分学-向量值函数和向量分析</title><link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E4%B8%8E%E5%90%91%E9%87%8F%E5%88%86%E6%9E%90/</link><pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate><guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E4%B8%8E%E5%90%91%E9%87%8F%E5%88%86%E6%9E%90/</guid><description># 多元微积分-多元微分学-向量值函数和向量分析 ## 一元向量值函数 $f: D \rightarrow \mathbf{R}^{n}$ ### 一元向量值函数定义 定义 设数集 $D\subset R$,则称映射 $f: D \rightarrow \mathbf{R}^{n}$ 为一元向量值函数, 通常记为$\boldsymbol{r}=\boldsymbol{f}(t), t \in D$ 其中数集 D 称为函数的定义域, , t称为自变量, $\boldsymbol{r}$ 称为因变量.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>向量值函数 on Jingmin&#39;s blog</title>
+    <link>https://ole12138.github.io/tags/%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0/</link>
+    <description>Recent content in 向量值函数 on Jingmin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2020</copyright>
+    <lastBuildDate>Wed, 25 Nov 2020 05:24:48 +0800</lastBuildDate><atom:link href="https://ole12138.github.io/tags/%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>多元微积分-多元微分学-向量值函数和向量分析</title>
+      <link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E4%B8%8E%E5%90%91%E9%87%8F%E5%88%86%E6%9E%90/</link>
+      <pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate>
+      
+      <guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E4%B8%8E%E5%90%91%E9%87%8F%E5%88%86%E6%9E%90/</guid>
+      <description># 多元微积分-多元微分学-向量值函数和向量分析 ## 一元向量值函数 $f: D \rightarrow \mathbf{R}^{n}$ ### 一元向量值函数定义 定义 设数集 $D\subset R$,则称映射 $f: D \rightarrow \mathbf{R}^{n}$ 为一元向量值函数, 通常记为$\boldsymbol{r}=\boldsymbol{f}(t), t \in D$ 其中数集 D 称为函数的定义域, , t称为自变量, $\boldsymbol{r}$ 称为因变量.</description>
+    </item>
+    
+  </channel>
+</rss>

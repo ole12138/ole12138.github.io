@@ -1,1 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>向量组 on Jingmin's blog</title><link>https://ole12138.github.io/tags/%E5%90%91%E9%87%8F%E7%BB%84/</link><description>Recent content in 向量组 on Jingmin's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2020</copyright><lastBuildDate>Wed, 25 Nov 2020 05:24:48 +0800</lastBuildDate><atom:link href="https://ole12138.github.io/tags/%E5%90%91%E9%87%8F%E7%BB%84/feed.xml" rel="self" type="application/rss+xml"/><item><title>线性代数-向量组的线性相关性</title><link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7/</link><pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate><guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7/</guid><description>线性代数-向量组的线性相关性 向量与向量组 向量 向量的定义 n 个有次序的数 $a_{1}, a_{2}, \cdots, a_{n}$ 所组成的数组称为n 维向量, 这 $n$个数称为该向量的 n 个分量，第 i 个数 $a_i$ 称为第 $i$ 个分量。（代数，或者说线性代数中的定义）</description></item><item><title>线性代数-向量组的线性相关性</title><link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%9E%8B%E4%B9%A0%E9%A2%98/</link><pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate><guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%9E%8B%E4%B9%A0%E9%A2%98/</guid><description># 线性代数-向量组的线性相关性 ## 向量与向量组 ### 向量 ##### 向量的定义 n 个有次序的数 $a_{1}, a_{2}, \cdots, a_{n}$ 所组成的数组称为n 维向量, 这 $n$个数称为该向量的 n 个分量，第 i 个数 $a_i$ 称为第 $i$ 个分量。（代数，或者说线性代数中的定义） 在解析几何中，我们把“既有大小又有方向的量”叫做向量，并把可随意平行移动的有向线段作为向量的几何形象。在引进坐标系以后，这种向量就有了坐标表示式——三个有次序的实数，也就是本书中的3维向量。因此，当n≤3时，n维向量可以把有向线段作为几何形象，但当n3时，n维向量就不再有这种几何形象，只是沿用一些几何术语罢了。 ##### 实向量与复向量 分量全为实数的向量称为实向量，分量为复数的向量称为复向量本书中除特别指明者外，一般只讨论实向量 ##### 行向量与列向量 n维向量可写成一行，也可写成一列。分别称为行向量和列向量，也就是行矩阵和列矩阵，并规定行向量与列向量都按矩阵的运算规则进行运算。 n维列向量： $a=\left(\begin{array}{c}a_{1} \\ a_{2} \\ \vdots \\ a_{n}\end{array}\right)$ n维行向量： $a^{\mathrm{T}}=\left(a_{1}, a_{2}, \cdots, a_{n}\right)$ 从矩阵角度看，有着相同分量的行向量与列向量。总看做是两个不同的向量（虽然按照[向量的定义](#向量的定义)，a与$a^T$应是同一个向量） ### 向量组 下面我们先讨论只含有限个向量的向量组，以后再把讨论的结果推广到含无限多个向量的向量组.</description></item><item><title>线性代数-向量组的线性相关性习题</title><link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7%E4%B9%A0%E9%A2%98/</link><pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate><guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7%E4%B9%A0%E9%A2%98/</guid><description># 线性代数-向量组的线性相关性习题 ## 向量组与矩阵 ###### 例1 !</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>向量组 on Jingmin&#39;s blog</title>
+    <link>https://ole12138.github.io/tags/%E5%90%91%E9%87%8F%E7%BB%84/</link>
+    <description>Recent content in 向量组 on Jingmin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2020</copyright>
+    <lastBuildDate>Wed, 25 Nov 2020 05:24:48 +0800</lastBuildDate><atom:link href="https://ole12138.github.io/tags/%E5%90%91%E9%87%8F%E7%BB%84/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>线性代数-向量组的线性相关性</title>
+      <link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7/</link>
+      <pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate>
+      
+      <guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7/</guid>
+      <description>线性代数-向量组的线性相关性 向量与向量组 向量 向量的定义 n 个有次序的数 $a_{1}, a_{2}, \cdots, a_{n}$ 所组成的数组称为n 维向量, 这 $n$个数称为该向量的 n 个分量，第 i 个数 $a_i$ 称为第 $i$ 个分量。（代数，或者说线性代数中的定义）</description>
+    </item>
+    
+    <item>
+      <title>线性代数-向量组的线性相关性</title>
+      <link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%9E%8B%E4%B9%A0%E9%A2%98/</link>
+      <pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate>
+      
+      <guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%9E%8B%E4%B9%A0%E9%A2%98/</guid>
+      <description># 线性代数-向量组的线性相关性 ## 向量与向量组 ### 向量 ##### 向量的定义 n 个有次序的数 $a_{1}, a_{2}, \cdots, a_{n}$ 所组成的数组称为n 维向量, 这 $n$个数称为该向量的 n 个分量，第 i 个数 $a_i$ 称为第 $i$ 个分量。（代数，或者说线性代数中的定义） 在解析几何中，我们把“既有大小又有方向的量”叫做向量，并把可随意平行移动的有向线段作为向量的几何形象。在引进坐标系以后，这种向量就有了坐标表示式——三个有次序的实数，也就是本书中的3维向量。因此，当n≤3时，n维向量可以把有向线段作为几何形象，但当n3时，n维向量就不再有这种几何形象，只是沿用一些几何术语罢了。 ##### 实向量与复向量 分量全为实数的向量称为实向量，分量为复数的向量称为复向量本书中除特别指明者外，一般只讨论实向量 ##### 行向量与列向量 n维向量可写成一行，也可写成一列。分别称为行向量和列向量，也就是行矩阵和列矩阵，并规定行向量与列向量都按矩阵的运算规则进行运算。 n维列向量： $a=\left(\begin{array}{c}a_{1} \\ a_{2} \\ \vdots \\ a_{n}\end{array}\right)$ n维行向量： $a^{\mathrm{T}}=\left(a_{1}, a_{2}, \cdots, a_{n}\right)$ 从矩阵角度看，有着相同分量的行向量与列向量。总看做是两个不同的向量（虽然按照[向量的定义](#向量的定义)，a与$a^T$应是同一个向量） ### 向量组 下面我们先讨论只含有限个向量的向量组，以后再把讨论的结果推广到含无限多个向量的向量组.</description>
+    </item>
+    
+    <item>
+      <title>线性代数-向量组的线性相关性习题</title>
+      <link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7%E4%B9%A0%E9%A2%98/</link>
+      <pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate>
+      
+      <guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7%E4%B9%A0%E9%A2%98/</guid>
+      <description># 线性代数-向量组的线性相关性习题 ## 向量组与矩阵 ###### 例1 !</description>
+    </item>
+    
+  </channel>
+</rss>

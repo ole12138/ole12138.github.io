@@ -1,1 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>基础数学 on Jingmin's blog</title><link>https://ole12138.github.io/tags/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/</link><description>Recent content in 基础数学 on Jingmin's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2020</copyright><lastBuildDate>Wed, 25 Nov 2020 05:24:48 +0800</lastBuildDate><atom:link href="https://ole12138.github.io/tags/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/feed.xml" rel="self" type="application/rss+xml"/><item><title>基础数学-三角函数</title><link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/</link><pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate><guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/</guid><description># 基础数学-三角函数 #### 诱导公式 | **公式一** | **公式二** | | ------------------------------------------------------------ | ------------------------------------------------------------ | | sin（2kπ+α）=sin α</description></item><item><title>基础数学-代数</title><link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0/</link><pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate><guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0/</guid><description># 基础数学-代数 ### 代数等式 $a^{3}+b^{3}=(a+b)\left(a^{2}-a b+b^{2}\right)$ $a^{3}-b^{3}=(a-b)\left(a^{2}+a b+b^{2}\right)$ $1^{2}+2^{2}+\cdots+n^{2}=\frac{n(n+1)(2 n+1)}{6}$ ### 复数运算 $|x+y i|=\sqrt{x^{2}+y^{2}}$ $|z|=|\bar{z}|$ $z+\bar{z}=2 a($ 实数 $), \quad z-\bar{z}=2 b i$ $z \cdot \bar{z}=|z|^{2}=a^{2}+b^{2}($ 实数 $)$ $\overline{z_{1}+z_{2}}=\bar{z}_{1}+\bar{z}_{2}$ $\overline{z_{1}-z_{2}}=\bar{z}_{1}-\bar{z}_{2}$ $\overline{z_{1} \cdot z_{2}}=\bar{z}_{1} \cdot \bar{z}_{2}$ $\overline{z_{1} / z_{2}}=\bar{z}_{1} / \bar{z}_{2}\left(z_{2} \neq 0\right)$ ### 代数不等式 #### 基本不等式（均值不等式） $\frac{a+b}{2} \geqslant \sqrt{a b} \quad(a0, b0)$，当且仅当$a=b$取等号。 或$a+b \geq 2 \sqrt{a b},(a0, b0)$ #### 基本不等式变形 $a+b \geq 2 \sqrt{a b}$ ，当且仅当$a=b$取等号。 $\frac{b}{a}+\frac{a}{b} \geq 2$，其中a, b同号。 $a b \leq\left(\frac{a+b}{2}\right)^{2} \quad(a, b \in R)$ $\left(\frac{a+b}{2}\right)^{2} \leq \frac{a^{2}+b^{2}}{2}(a, b \in R)$ ### 代数算法 #### 长除法 长除法俗称「长除」，适用于[整式](https://baike.</description></item><item><title>基础数学-几何</title><link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E5%87%A0%E4%BD%95/</link><pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate><guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E5%87%A0%E4%BD%95/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>基础数学 on Jingmin&#39;s blog</title>
+    <link>https://ole12138.github.io/tags/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/</link>
+    <description>Recent content in 基础数学 on Jingmin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2020</copyright>
+    <lastBuildDate>Wed, 25 Nov 2020 05:24:48 +0800</lastBuildDate><atom:link href="https://ole12138.github.io/tags/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基础数学-三角函数</title>
+      <link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate>
+      
+      <guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/</guid>
+      <description># 基础数学-三角函数 #### 诱导公式 | **公式一** | **公式二** | | ------------------------------------------------------------ | ------------------------------------------------------------ | | sin（2kπ+α）=sin α</description>
+    </item>
+    
+    <item>
+      <title>基础数学-代数</title>
+      <link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0/</link>
+      <pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate>
+      
+      <guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0/</guid>
+      <description># 基础数学-代数 ### 代数等式 $a^{3}+b^{3}=(a+b)\left(a^{2}-a b+b^{2}\right)$ $a^{3}-b^{3}=(a-b)\left(a^{2}+a b+b^{2}\right)$ $1^{2}+2^{2}+\cdots+n^{2}=\frac{n(n+1)(2 n+1)}{6}$ ### 复数运算 $|x+y i|=\sqrt{x^{2}+y^{2}}$ $|z|=|\bar{z}|$ $z+\bar{z}=2 a($ 实数 $), \quad z-\bar{z}=2 b i$ $z \cdot \bar{z}=|z|^{2}=a^{2}+b^{2}($ 实数 $)$ $\overline{z_{1}+z_{2}}=\bar{z}_{1}+\bar{z}_{2}$ $\overline{z_{1}-z_{2}}=\bar{z}_{1}-\bar{z}_{2}$ $\overline{z_{1} \cdot z_{2}}=\bar{z}_{1} \cdot \bar{z}_{2}$ $\overline{z_{1} / z_{2}}=\bar{z}_{1} / \bar{z}_{2}\left(z_{2} \neq 0\right)$ ### 代数不等式 #### 基本不等式（均值不等式） $\frac{a+b}{2} \geqslant \sqrt{a b} \quad(a0, b0)$，当且仅当$a=b$取等号。 或$a+b \geq 2 \sqrt{a b},(a0, b0)$ #### 基本不等式变形 $a+b \geq 2 \sqrt{a b}$ ，当且仅当$a=b$取等号。 $\frac{b}{a}+\frac{a}{b} \geq 2$，其中a, b同号。 $a b \leq\left(\frac{a+b}{2}\right)^{2} \quad(a, b \in R)$ $\left(\frac{a+b}{2}\right)^{2} \leq \frac{a^{2}+b^{2}}{2}(a, b \in R)$ ### 代数算法 #### 长除法 长除法俗称「长除」，适用于[整式](https://baike.</description>
+    </item>
+    
+    <item>
+      <title>基础数学-几何</title>
+      <link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E5%87%A0%E4%BD%95/</link>
+      <pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate>
+      
+      <guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E5%87%A0%E4%BD%95/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
