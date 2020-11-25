@@ -16,7 +16,7 @@ jobs:
         submodules: true
 
     - name: Setup pandoc
-    - uses: maxheld83/pandoc@v2
+      uses: maxheld83/pandoc@v2
       #with:
         #args: "--help"
 
