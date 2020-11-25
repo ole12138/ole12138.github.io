@@ -1,0 +1,277 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate href=/index.xml type=application/rss+xml title="Jingmin's blog"><link rel=icon href=https://ole12138.github.io//favicon.ico><title>概率论与数理统计-随机事件与概率 - Jingmin's blog</title><link rel=stylesheet href=https://ole12138.github.io//css/highlight/github.css><link rel=stylesheet href=https://ole12138.github.io//css/bootstrap.min.css><link rel=stylesheet href=https://ole12138.github.io//css/bootstrap-theme.min.css><link rel=stylesheet href=https://ole12138.github.io//css/theme.css><link rel=stylesheet href=https://ole12138.github.io//css/bootie-docs.css><link rel=stylesheet href=https://ole12138.github.io//css/site.css></head><body role=document><nav class="navbar navbar-inverse navbar-fixed-top"><div class=container><div class=navbar-header><button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#navbar aria-expanded=false aria-controls=navbar>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span></button>
+<a class=navbar-brand href=https://ole12138.github.io//>Jingmin's blog</a></div><div id=navbar class="navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href=https://ole12138.github.io//>Home</a></li><li><a href=/post>All posts</a></li><li><a href=/tags>Tags</a></li><li><a href=/about>About</a></li><li class=dropdown><a href=# class=dropdown-toggle data-toggle=dropdown role=button aria-expanded=false>Categories<span class=caret></span></a><ul class=dropdown-menu role=menu><li><a href=https://ole12138.github.io//categories/%E6%95%B0%E5%AD%A6>数学</a></li><li><a href=https://ole12138.github.io//categories/%E7%89%A9%E7%90%86>物理</a></li></ul></li></ul></div></div></nav><div class=container><div class=row><div class="col-sm-8 doc-main"><main role=main><article><a id=title></a><h1 class=doc-entry-title>概率论与数理统计-随机事件与概率</h1><div class=doc-entry-meta><span><time datetime=2020-11-25>November 25, 2020</time></span></div><section># 概率论与数理统计-随机事件与概率
+## 基本概念
+##### 现象
+[现象](https://baike.baidu.com/item/%E7%8E%B0%E8%B1%A1/2808631)
+现象是[事物](https://baike.baidu.com/item/事物/1693084)表现出来的，能被人感觉到的一切[情况](https://baike.baidu.com/item/情况/1392364)。现象是人能够看到、听到、闻到、触摸到的。
+按照是否有自然属性来分，现象可分为自然现象和[社会现象](https://baike.baidu.com/item/社会现象/6139891)。
+按照现象的结果是否唯一来分，现象可分为确定性现象和**随机现象**。
+概率统计研究的主要目标是**随机现象**，即现象的结果有多种可能，且事先无法准确预测将会发生哪种结果。
+##### 随机试验
+对**随机现象**进行**一次观察**，称为一次随机试验（试验）
+> 概率论中将满足下面三个条件的试验称为随机试验，简称试验：
+>
+> 1. 可在相同的条件下重复进行；
+> 2. 每次试验的结果不止一个
+> 3. 试验之前不能确定哪一个结果会发生，但所有的结果是明确可知的
+>
+##### 样本点
+随机试验中每一个可能发生的结果（现象观察到的结果），称为一个样本点。一般记作$\omega$
+##### 样本空间
+随机试验中所有可能发生的结果，即所有的样本点，称为样本空间。一般记作$\Omega= \{\omega\}$.
+随机事件
+样本空间的任意子集,都称为随机事件（事件）。
+###### 特殊事件(不可能事件与必然事件)
+不可能事件：不含样本点的事件（不含任何元素），称为不可能事件。用集合的语言描述为空集$\varnothing$
+必然事件：包含样本空间所有样本点的事件（包含所有可能的结果，因此该事件一定会发生），称为必然事件。用集合的语言描述为样本空间全集$\Omega$
+###### 事件的发生
+若事件A中的某个样本点在随机试验中出现（某个样本点被观测到），称为事件A发生。
+即事件A中某个样本点被观测到$\Leftrightarrow$事件A发生
+### 事件的关系与运算
+经常要用简单事件表示一些复杂事件（尤其是研究概率的过程中）。
+因此需要讨论使事件的关系与运算。
+这里的事件用集合来表示，所以实际上是集合的关系与运算。
+##### 包含关系$A \subset B$
+定义:**A发生导致B发生**,称:**B包含A**,或称A被B包含.记$A \subset B$.集合论：A的元素必属于B。图示：
+![B包含A](https://picgo12138.oss-cn-hangzhou.aliyuncs.com/md/截图_20191229034638.png)
+（定义，称，记，集合论，图）
+##### 相等关系A=B
+$B \subset A, B \subset A$，则A=B
+##### 互斥关系$A B=\varnothing$
+在试验中，事件A与B不能同时发生，即$A B=\varnothing$，则称A，B互为**互斥事件**
+设$A_1, A_2, \cdots, A_n$是一组事件，
+若它们两两互斥(都是互斥事件)，
+且它们的并等于样本空间（$\cup_{i=1}^{n} A_i = \Omega$），
+称这组事件构成**一个互不相容的完备事件组**（完备事件组）
+##### 对立关系
+每次事件中，“事件A不发生”的事件称为事件A的对立事件或者逆事件。记为$\bar{A}$。
+性质：
+$(1) A+A=\Omega$
+$(2) A \bar{A}=\varnothing$
+由定义可知：**对立事件一定是互斥事件，但互斥事件不一定是对立事件**
+##### 事件的和
+事件的和，也称事件的并，记作 $A \cup B$或$A+B$
+性质：
+$(1) A \subset A \cup B, B \subset A \cup B$
+$(2) A \cap(A \cup B)=A, \quad B \cap(A \cup B)=B$
+$(3) A \cup A=A$
+##### 事件的差
+A-B表示事件A发生而事件B不发生
+性质：
+$(1) A-B \subset A$
+$(2)(A-B) \cup A=A, \quad(A-B) \cup B=A \cup B$
+$(3)(A-B) \cap A=A-B,(A-B) \cap B=\varnothing$
+##### 事件的积（交）AB
+$A \cap B$或AB，表示事件A与B同时发生
+性质：
+$(1) A \cap B \subseteq A, \quad A \cap B \subset B$
+$(2)(A \cap B) \cup A=A, \quad(A \cap B) \cup B=B$
+$(3) A \cap A=A$
+##### 事件的运算律
+与集合的运算律相似
+**交换律**：$A \cup B=B \cup A, A B=B A$
+**结合律**：$(A \cup B) \cup C=A \cup(B \cup C), \quad(A \cap B) \cap C=A \cap(B \cap C)$
+**分配律**：$(A \cup B) C=(A C) \cup(B C), \quad A \cup(B C)=(A \cup B)(A \cup C)$
+**摩根律**：
+$\overline{A_{1} \cup A_{2}}=\bar{A}_{1} \cap \bar{A}_{2}, \overline{A_{1} \cap A_{2}}=\bar{A}_{1} \cup \bar{A}_{2}$
+**减法满足**：$A-B=A \bar{B}$
+**增补性质**：$A= (AB) \cup (A\bar{B})$
+### 事件的概率
+#### 概率的定义
+前面讨论了随机事件的概念与性质，自然地，人们关心随机事件发生的可能性。
+##### 频率$\frac{n_A}{n}$
+在一定条件下试验进行n次，若事件A发生$n_A$次，则称**事件A发生的频率**为$\frac{n_A}{n}$
+##### 概率的定义（统计定义）
+对于随机现象，当试验次数n增大时，事件A的**频率**总逐渐**趋近于一个确定的常数**（大数定理将给出更严格的解释），我们就用这个常数来反映事件A发生的可能性大小，并把这个常数称为**事件A发生的概率**，记为$P(A)$。
+概率的这个通俗定义，即为概率的统计定义。
+概率统计定义的作用：人们往往用n较大时事件A的频率$\frac{n_A}{n}$作为事件A发生的概率$P(A)$的近似。
+概率统计定义的缺陷：
+不能作为概率论严格的理论基础；
+对于一些无法或很难大量重复的试验，无法适用；
+统计定义中“确定的常数”不够明确。
+##### 概率的定义（公理化定义）
+设随机试验E的样本空间为$\Omega$，则称满足下列条件的事件集的函数$P(*)$为概率：
+1. 非负性：对于任意事件A，$P(A) \geqslant 0$；
+2. 规范性：对于必然事件$\Omega$， $P(\Omega)=1$；
+3. 可列可加性：设$A_{1}, A_{2}, \cdots, A_{n} \cdots$为两两互不相容的事件，即$A_{i} A_{j}=\varnothing(i \neq j, i, j=1,2, \cdots)$，则
+$P\left(\bigcup_{k=1}^{\infty} A_{k}\right)=\sum_{k=1}^{\infty} P\left(A_{k}\right)$
+即将满足以上三种属性的集函数，定义为随机事件的概率。
+#### 概率的性质
+##### 不可能事件的概率$P(\varnothing)=0$
+##### 必然事件的概率$P(\Omega) = 1$
+##### 对立事件的概率$P(\bar{A})=1-P(A)$
+##### 一般事件，概率的减法：
+$P(A-B)=P(A\bar{B}) = P(A)-P(A B)$
+##### 包含事件，概率的减法：
+若事件A，B满足$A \subset B$，则$P(A-B)=P(A)-P(B)$ （且$P(A) \le P(B)$）
+##### 一般事件，概率的加法：
+$P(A \cup B)=P(A)+P(B)-P(A B)$;
+$P(A \cup B \cup C)=P(A)+P(B)+P(C)-P(A B)-P(B C)-P(A C)+P(A B C)$;
+...
+$P\left(\bigcup_{i=1}^{n} A_{i}\right)=\sum_{i=1}^{n} P\left(A_{i}\right)-\sum_{i \in i<j \leq n} p\left(a_{i} a_{j}\right)+\sum_{1 \leq i \leq j<k \leq n} p\left(a_{i} a_{j} a_{k}\right)+\cdots+(-1)^{m-1} p\left(a_{1} a_{2} \cdots a_{m}\right)$ ##### 有限个两两互斥事件，概率的加法： 若事件$a_1,a_2,\cdots,a_n$两两互斥，则$p\left(\bigcup_{i=1}^{n} a_{i}\right)="\sum_{i=1}^{n}" p\left(a_{i}\right)$ #### 古典概率模型与几何概率模型 ##### 古典概率模型 古典概率模型是一种最简单的概率模型，是具有如下特征的概率模型： 1.试验的样本空间$\omega$中只包含有限个样本点，$\omega=\{\omega_1,\omega_2,\cdots,\omega_N\}$ 2.每个样本点发生的可能性相同，即$p(\omega_1)="P(\omega_2)=\cdots=P(\omega_N)=\frac{1}{N}$" 在古典概率模型中，设样本空间$\omega$有n个样本点，事件$a \subset \omega$,且a中含有k个样本点，则显然有$p(a)=\frac{k}{N}$ ###### 抽样问题和抽奖问题 从一堆物品中，连续抽取k次，每次抽取的结果不放回去，这种抽取方式称为**无放回抽样**。 从一堆物品中，每次抽取一个，观察后放回，重复进行k次，这种抽取方式称为**有放回抽样**。 无放回抽样（抽奖）的公平性：彩票盒中n张彩票，k张有奖，n个人依次抽取一张（不放回），每个人中奖概率都是$\frac{k}{n}$> 证明：
+>
+> 每个人依次抽取一张，有$n!$种取法；
+>
+> 考虑第j个人中奖的取法数：
+> 在第j个位置安排一张中奖彩票，有k种取法，
+> 剩下的$(n-1)$张彩票在余下位置作全排列，有$(n-1)!$种取法，
+> 则第j人中奖的取法数有$k(n-1)!$种
+>
+> 则第j个人中奖的概率为$P(A_j) = \frac{k(n-1)!}{n!}=\frac{k}{n}$
+###### 盒子装球问题
+将n个球随机放入N个盒子中($n\le N$)，盒子容量不限，则每个盒子中至多有一个球的概率$P(A) = \frac{A_N^n}{N^n}$。
+> 证明
+>
+> 每个球都可以放入N个盒子中的任意一个盒子，共$N^n$种放法，且每种放法是等可能的。
+>
+> 每个盒子至多有一个球有$A_N^n$种放法。
+>
+> 则每个盒子中至多有一个球的概率为$P(A) = \frac{A_N^n}{N^n}$
+实际应用：n个人生日各不相同的概率（对应于n个球放入N=365个盒子中，要求每个盒子至多装一个球的问题）
+##### 几何概率模型
+几何概率模型是具有如下两个特征的概率模型：
+1.随即现象的样本空间$\Omega$是直线（平面、三维空间）的某部分区域，其长度（面积、体积）用$S_\Omega$表示
+2.$\Omega$的任何子集A的概率与A的长度（面积、体积）$S_A$成正比，而与A的位置、形状无关
+不难得到$P(A) = \frac{S_A}{S_\Omega}$
+###### 约会问题
+约会问题是几何概率模型的一个例子
+#### 条件概率
+##### 条件概率的定义
+设A，B是两个事件，且$P(A)>0$，称$P(B | A)=\frac{P(A B)}{P(A)}$为在事件A发生的条件下事件B发生的概率
+##### 概率的乘法
+由条件概率的定义，可知：
+$P(AB) = P(A)\cdot P(B|A)$
+##### 全概率公式
+定义：设样本空间为$\Omega$,事件$A_1,A_2,\cdots,A_n$构成一个完备事件组，且$P(A_i) > 0 (i = 1,2,\cdots,n)$.
+则对任意事件$B \subset \Omega$，有$P(B)=\sum_{i=1}^n P(A_i) P(B|A_i)$
+> 证明：
+> 事件$A_1,A_2,\cdots,A_n$构成一个完备事件组，则$B=\bigcup_{i=1}^n A_i B$
+> 由$A_1 B, A_2 B, \cdots , A_n B$两两互斥，根据概率的加法与乘法，
+> $P(B)=P\left(\bigcup_{i=1}^{n} A_{i} B\right)=\sum_{i=1}^n P(A_i) P(B|A_i)$
+很多场合下，直接计算某事件B的概率不容易，而在各个不同条件下$A_1,A_2,\cdots,A_n$下，B发生的概率$P(A_i) P(B|A_i)$容易知道，那么全概率公式求$P(B)$是很好的方法。
+##### 贝叶斯公式
+与全概率公式相反，贝叶斯公式常用于根据观察到的结果来推断各种原因（或途径）发生的可能性的大小。即用来求某事件B发生的条件下，$A_i$发生的概率$P(A_i|B)$.
+定义：：设样本空间为$\Omega$,事件$A_1,A_2,\cdots,A_n$构成一个完备事件组，B为一事件，且$P(B)>0,P(A_i) > 0 (i = 1,2,\cdots,n)$.
+则有$P(A_i|B)=\frac{P(A_i) P(B|A_i)}{\sum_{j=1}^n P(A_j) P(B|A_j)}$，其中$i=1,2,\cdots,n$
+实际上，可以从概率的乘法公式以及全概率公式出发，来以及贝叶斯公式：
+$P(A_i B) \\= P(A_i) P(B|A_i) \\= P(B) P(A_i|B) = \sum_{j=1}^n P(A_j) P(B|A_j) \cdot P(A_i |B)$
+#### 事件的独立性
+前面讨论了条件概率$P(B|A)$，一般来说$P(B|A) \neq P(B)$.
+但很多时候，确实有$P(B|A) = P(B)$，即A的发生并不影响B发生的概率（也叫B对A是独立的）。
+而若$P(B|A) = P(B)$的时候，由条件概率乘法公式$P(AB) = P(A)P(B|A) = P(B)P(A|B)$可知，有$成立P(A|B) = P(A)$，即B的发生并不影响A发生的概率（也叫A对B也是独立的）
+##### 两事件相互独立的定义
+定义：设A，B是两个事件，若有等式$P(A B)=P(A) P(B)$，则称A与B互相独立。
+##### 两事件相互独立的性质
+若事件A与B独立，则A与$\bar{B}$也独立
+> 证明：
+>
+> A与B独立，即有$P(A B)=P(A) P(B)$
+>
+> $\begin{aligned} P(A \bar{B}) &=P(A-A B) \\ &=P(A)-P(A B) \\ &=P(A)-P(A) P(B) \\ &=P(A)(1-P(B)) \\ &=P(A) P(\bar{B}) \end{aligned}$
+显然,若四对事件A与B，A与$\bar{B}$，$\bar{A}$与B，$\bar{A}$与$\bar{B}$中有一对独立，则其他三对也对立。
+##### 多事件两两独立
+一般的，设$A_{1}, A_{2}, \cdots, A_{n}$是n个事件，如果对于任意$k\left(k_{k} \leqslant n\right)$和任意$1 \leqslant i_{1}<i_{2}<\cdots<i_{k} \leqslant n$，具有等式$p\left(a_{i_{1}} a_{i_{2}} \cdots a_{i_{k}}\right)=P\left(A_{i_{1}}\right) p\left(a_{i_{2}}\right) \cdots p\left(a_{i_{k}}\right)$，则称$a_{1}, a_{2}, \cdots, a_{n}$为两两独立的事件 ##### 多事件相互独立 设$a_1,a_2,a_3$是3个事件，若同时满足下面4个等式： $\begin{aligned} p\left(a_{1} a_{2}\right) &=P\left(A_{1}\right) p\left(a_{2}\right) \\ p\left(a_{2} a_{3}\right) &=P\left(A_{2}\right) p\left(a_{3}\right) \\ p\left(a_{1} a_{3}\right) &=P\left(A_{1}\right) p\left(a_{3}\right) \\ p\left(a_{1} a_{2} a_{3}\right) &=P\left(A_{1}\right) p\left(a_{2}\right) p\left(a_{3}\right) \end{aligned}$ 则称$a_1,a_2,a_3$三个事件相互独立。 注意：前三个等式表示3个事件两两独立，说明三个事件相互独立比两两独立要强。 对于n个事件$a_1,a_2,\cdots,a_n$，若其中$k(2\le k \le n)$个事件乘积的概率等于这k个事件概率的乘积，称$a_1,a_2,\cdots,a_n$相互独立。 ###### n个相互独立事件的并 设n个事件$a_1,a_2,\cdots,a_n$相互独立，则 $\begin{aligned} p\left(\bigcup_{i=1}^{n} a_{i}\right) &="1-P\left(\overline{\bigcup_{i=1}^{n}" a_{i}}\right) \\ &="1-P\left(\bigcap_{i=1}^{n}" \overline{a_{i}}\right) \\ &="1-\prod_{i=1}^{n}" p\left(\overline{a_{i}}\right) \\ &="1-\prod_{i=1}^{n}\left[1-P\left(A_{i}\right)\right]" \end{aligned}$ ###### n个相互对立事件，分成两组，分别作集合运算，运算结果保持独立 设n个事件$a_1,a_2,\cdots,a_n$相互独立， 现将它们分成两组， 比如$a_1,a_2,\cdots,a_k$为一组，并对$a_1,a_2,\cdots,a_k$作任意的集合运算，将所得新事件记为b； $a_{k+1},a_{k+2},\cdots,a_n$为另一组，并对$a_{k+1},a_{k+2},\cdots,a_n$作任意的集合运算，将所得新事件记为c； 则b与c独立。 ##### 独立试验序列 把某试验独立重复的进行n次。 在每次试验中，只关心事件a发生与否，并设每次试验中a发生的概率均为$p(0<p<1)$，而且每次的试验结果相互独立。 这样的n次重复试验称为**n重独立试验序列**，也称**n重伯努利试验**。 n重伯努利试验中，我们关心的事件a可能发生的次数为$0,1,\cdots,n$，并且a恰好发生$k(k="0,1,\cdots,n)$次的概率为$P_{n}(k)=\mathrm{C}_{n}^{k}" p^{k}(1-p)^{n-k}$ 容易验证：$\sum_{k=0}^{n} \mathrm{c}_{n}^{k} p^{k}(1-p)^{n-k}="[p+(1-p)]^{n}=1$" </section></article></main></div><div class="col-sm-3 col-sm-offset-1 doc-sidebar"><div id=sidebar><div class=sidebar-module><div class=sidebar-toc><h4 class=sidebar-heading>Table of Contents</h4><ul><li><strong><a href=#title>概率论与数理统计-随机事件与概率</a></strong></li></ul></div></div><div class=sidebar-module><h4 class=sidebar-heading>Pages in Categories</h4><ul class=sidebar-category-list><li><a href=https://ole12138.github.io//categories/%E6%95%B0%E5%AD%A6><span class=doc-list-category>数学</span></a><ul><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%BA%94%E7%94%A8-%E5%8D%95%E8%B0%83%E6%80%A7%E4%B8%8E%E6%9E%81%E5%80%BC/>一元函数微分学-单调性与极值</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%BA%94%E7%94%A8-%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/>一元微分学-可导函数的中值定理</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86%E4%B9%A0%E9%A2%98/>一元微分学-导数与微分习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%AF%BC%E6%95%B0%E5%92%8C%E5%BE%AE%E5%88%86/>一元微分学-导数和微分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%BA%94%E7%94%A8-%E5%BC%A7%E5%BE%AE%E5%88%86%E4%B8%8E%E6%9B%B2%E7%8E%87/>一元微分学-导数的应用</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%BA%94%E7%94%A8-%E5%8D%95%E8%B0%83%E6%80%A7%E4%B8%8E%E6%9E%81%E5%80%BC%E4%B9%A0%E9%A2%98/>一元微分学-导数的应用-单调性与极值</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%BA%94%E7%94%A8-%E5%BC%A7%E5%BE%AE%E5%88%86%E4%B8%8E%E6%9B%B2%E7%8E%87%E4%B9%A0%E9%A2%98/>一元微分学的应用-弧微分与曲率</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/>一元积分学-不定积分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E4%B9%A0%E9%A2%98/>一元积分学-不定积分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E5%AE%9A%E7%A7%AF%E5%88%86%E4%B8%8E%E5%B9%BF%E4%B9%89%E7%A7%AF%E5%88%86/>一元积分学-定积分与反常积分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E5%AE%9A%E7%A7%AF%E5%88%86%E4%B8%8E%E5%B9%BF%E4%B9%89%E7%A7%AF%E5%88%86%E4%B9%A0%E9%A2%98/>一元积分学-定积分与反常积分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E5%BA%94%E7%94%A8/>一元积分学-定积分的应用</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/>一元积分学-定积分的应用</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5-%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/>函数与极限</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5-%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90%E4%B9%A0%E9%A2%98/>函数与极限习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%BA%94%E7%94%A8-%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86%E4%B9%A0%E9%A2%98/>可导函数的中值定理习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93todo/>回归分析总结</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/>基础数学-三角函数</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0/>基础数学-代数</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E5%87%A0%E4%BD%95/>基础数学-几何</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E4%B8%8E%E5%90%91%E9%87%8F%E5%88%86%E6%9E%90/>多元微积分-多元微分学-向量值函数和向量分析</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%94%AF%E7%9A%84%E6%80%BB%E7%BB%93/>数学分支的总结</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/>数学物理方法总结</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/>最优化问题总结</a></li><li><span class=active>概率论与数理统计-随机事件与概率</span></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/>概率论与数理统计-随机变量及其分布</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93/>泛函分析</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7/>线性代数-向量组的线性相关性</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%9E%8B%E4%B9%A0%E9%A2%98/>线性代数-向量组的线性相关性</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7%E4%B9%A0%E9%A2%98/>线性代数-向量组的线性相关性习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%9E%8B/>线性代数-相似矩阵与二次型</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B51/>线性代数-矩阵1</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B51%E4%B9%A0%E9%A2%98/>线性代数-矩阵1习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B52%E7%9F%A9%E9%98%B5%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/>线性代数-矩阵初等变换与线性方程组习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B52%E7%9F%A9%E9%98%B5%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E4%B9%A0%E9%A2%98/>线性代数-矩阵初等变换与线性方程组习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F/>线性代数-行列式</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F%E4%B9%A0%E9%A2%98/>线性代数-行列式习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E6%80%BB%E7%BB%93/>线性代数总结</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E5%92%8C%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E6%80%BB%E7%BB%93/>高等数学</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E8%84%89%E7%BB%9C/>高等数学-一元微积分-脉络</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%90%91%E9%87%8F%E4%BB%A3%E6%95%B0%E4%B8%8E%E7%A9%BA%E9%97%B4%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/>高等数学-向量代数与空间解析几何</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%90%91%E9%87%8F%E4%BB%A3%E6%95%B0%E4%B8%8E%E7%A9%BA%E9%97%B4%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95%E4%B9%A0%E9%A2%98/>高等数学-向量代数与空间解析几何习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%80%A7%E8%B4%A8/>高等数学-多元微分学</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E4%BB%A3%E6%95%B0%E5%BA%94%E7%94%A8%E6%9E%81%E5%80%BC%E4%B8%8E%E6%9C%80%E5%80%BC/>高等数学-多元微分学-代数应用：多元函数的极值</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6%E4%B9%A0%E9%A2%98/>高等数学-多元微分学习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E6%9B%B2%E7%BA%BF%E7%A7%AF%E5%88%86%E4%B8%8E%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86/>高等数学-多元微积分-曲线积分与曲面积分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E6%9B%B2%E7%BA%BF%E7%A7%AF%E5%88%86%E4%B8%8E%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86%E4%B9%A0%E9%A2%98/>高等数学-多元微积分-曲线积分与曲面积分习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E6%A6%82%E5%BF%B5%E4%B8%8E%E8%8C%83%E5%9B%B4/>高等数学-多元微积分概述</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E9%87%8D%E7%A7%AF%E5%88%86/>高等数学-多元积分学-重积分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E9%87%8D%E7%A7%AF%E5%88%86%E4%B9%A0%E9%A2%98/>高等数学-多元积分学-重积分习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/>高等数学-微分方程</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E4%B9%A0%E9%A2%98/>高等数学-微分方程习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E7%BA%A7%E6%95%B0/>高等数学-级数</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E7%BA%A7%E6%95%B0%E4%B9%A0%E9%A2%98/>高等数学-级数习题</a></li></ul></li><li><a href=https://ole12138.github.io//categories/%E7%89%A9%E7%90%86><span class=doc-list-category>物理</span></a><ul><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/>数学物理方法总结</a></li></ul></li></ul></div><div class=sidebar-module><h4 class=sidebar-heading>Tags</h4><div class=tag-box><a class=tag-item href=https://ole12138.github.io//tags/np%E5%AE%8C%E5%A4%87%E7%90%86%E8%AE%BA>np完备理论</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6>一元微分学</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86>一元微积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6>一元积分学</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0>三角函数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B8%89%E8%A7%92%E7%BA%A7%E6%95%B0>三角级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86>不定积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B9%A0%E9%A2%98>习题</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%BA%8C%E6%AC%A1%E5%9E%8B>二次型</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%BA%8C%E6%AC%A1%E5%9E%8B%E5%8C%96%E4%B8%BA%E6%A0%87%E5%87%86%E5%9E%8B>二次型化为标准型</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%BB%A3%E6%95%B0>代数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%BB%A3%E6%95%B0%E5%BA%94%E7%94%A8>代数应用</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%BC%BD%E9%A9%AC%E5%87%BD%E6%95%B0>伽马函数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0>傅里叶级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%85%8B%E6%8B%89%E9%BB%98%E6%B3%95%E5%88%99>克拉默法则</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%87%A0%E4%BD%95>几何</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%87%BD%E6%95%B0>函数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA>函数极限理论</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4>函数空间</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%87%BD%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0>函数项级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%88%86%E5%9D%97%E7%9F%A9%E9%98%B5>分块矩阵</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%88%86%E7%B1%BB>分类</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%8D%95%E8%B0%83%E6%80%A7>单调性</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%8F%8D%E5%B8%B8%E7%A7%AF%E5%88%86>反常积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%8F%AF%E5%AF%BC%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86>可导函数的中值定理</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F>向量</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E4%BB%A3%E6%95%B0>向量代数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0>向量值函数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E5%86%85%E7%A7%AF>向量内积</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E5%88%86%E6%9E%90>向量分析</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E7%9A%84%E6%AD%A3%E4%BA%A4%E6%80%A7>向量的正交性</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4>向量空间</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E7%BB%84>向量组</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%A7%A9>向量组的秩</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7>向量组的线性相关性</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%BB%84%E5%90%88>向量组的线性组合</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E9%95%BF%E5%BA%A6>向量长度</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90>回归分析</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6>基础数学</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%A4%8D%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0>复数项级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E7%9A%84%E6%9E%81%E5%80%BC%E4%B8%8E%E6%9C%80%E5%80%BC>多元函数的极值与最值</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6>多元微分学</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86>多元微积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%A4%9A%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6>多元积分学</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%AE%9A%E7%A7%AF%E5%88%86>定积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E5%BA%94%E7%94%A8>定积分的应用</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%AF%B9%E7%A7%B0%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E5%8C%96>对称矩阵对角化</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%AF%BC%E6%95%B0>导数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%AF%BC%E6%95%B0%E7%9A%84%E5%BA%94%E7%94%A8>导数的应用</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%B8%B8%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0>常数项级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%B9%82%E7%BA%A7%E6%95%B0>幂级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%BC%A7%E5%BE%AE%E5%88%86>弧微分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%BE%AE%E5%88%86>微分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B>微分方程</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%94%AF>数学分支</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90>数学分析</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%95%B4%E6%95%B0%E4%BC%98%E5%8C%96>整数优化</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%96%B9%E9%98%B5%E7%9A%84%E7%89%B9%E5%BE%81%E5%80%BC>方阵的特征值</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%96%B9%E9%98%B5%E7%9A%84%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F>方阵的特征向量</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%96%B9%E9%98%B5%E7%9A%84%E8%A1%8C%E5%88%97%E5%BC%8F>方阵的行列式</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%98%A0%E5%B0%84>映射</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%9B%B2%E7%8E%87>曲率</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%9B%B2%E7%BA%BF%E7%A7%AF%E5%88%86>曲线积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86>曲面积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98>最优化问题</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%9E%81%E5%80%BC>极值</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%9E%81%E9%99%90>极限</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%A0%87%E5%87%86%E5%9E%8B>标准型</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%80%A7%E8%B4%A8>概念与性质</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%A6%82%E7%8E%87%E8%AE%BA>概率论</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%A6%82%E8%BF%B0>概述</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%AD%A3%E5%AE%9A%E7%9F%A9%E9%98%B5>正定矩阵</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%B3%8A%E6%9D%BE%E7%A7%AF%E5%88%86>泊松积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%89%A9%E7%90%86>物理</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9B%B8%E4%BC%BC%E5%AF%B9%E8%A7%92%E5%8C%96>相似对角化</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5>相似矩阵</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9F%A9%E9%98%B5>矩阵</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9F%A9%E9%98%B5%E5%90%88%E5%90%8C>矩阵合同</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9F%A9%E9%98%B5%E6%B1%82%E9%80%86>矩阵求逆</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2>矩阵的初等变换</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9>矩阵的秩</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97>矩阵的运算</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%A6%BB%E6%95%A3%E6%9C%80%E4%BC%98%E5%8C%96>离散最优化</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%A9%BA%E9%97%B4%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95>空间解析几何</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%BA%A7%E6%95%B0>级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0>线性代数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84>线性方程组</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3>线性方程组的解</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E8%A7%A3%E7%9A%84%E7%BB%93%E6%9E%84>线性方程组解的结构</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%BB%84%E5%90%88%E4%BC%98%E5%8C%96>组合优化</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E8%84%89%E7%BB%9C>脉络</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E8%A1%8C%E5%88%97%E5%BC%8F>行列式</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E8%A1%8C%E5%88%97%E5%BC%8F%E5%B1%95%E5%BC%80%E5%85%AC%E5%BC%8F>行列式展开公式</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E8%A1%8C%E5%88%97%E5%BC%8F%E8%A7%A3%E6%96%B9%E7%A8%8B%E7%BB%84%E5%BA%94%E7%94%A8>行列式解方程组应用</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E8%BE%A8%E6%9E%90>辨析</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E8%BF%9E%E7%BB%AD%E6%80%A7>连续性</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%87%8D%E7%A7%AF%E5%88%86>重积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6>随机事件</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87>随机事件的概率</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F>随机变量</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%86%E5%B8%83>随机变量的分布</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%AB%98%E6%96%AF%E7%A7%AF%E5%88%86>高斯积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6>高等数学</a></div></div></div></div></div><style>code.has-jax{font:inherit;font-size:100%;background:inherit;border:inherit;color:#515151}</style><script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:true,processEnvironments:true},options:{skipHtmlTags:['script','noscript','style','textarea','pre']}};window.addEventListener('load',(event)=>{document.querySelectorAll("mjx-container").forEach(function(x){x.parentElement.classList+='has-jax'})});</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>

@@ -1,0 +1,371 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate href=/index.xml type=application/rss+xml title="Jingmin's blog"><link rel=icon href=https://ole12138.github.io//favicon.ico><title>线性代数总结 - Jingmin's blog</title><link rel=stylesheet href=https://ole12138.github.io//css/highlight/github.css><link rel=stylesheet href=https://ole12138.github.io//css/bootstrap.min.css><link rel=stylesheet href=https://ole12138.github.io//css/bootstrap-theme.min.css><link rel=stylesheet href=https://ole12138.github.io//css/theme.css><link rel=stylesheet href=https://ole12138.github.io//css/bootie-docs.css><link rel=stylesheet href=https://ole12138.github.io//css/site.css></head><body role=document><nav class="navbar navbar-inverse navbar-fixed-top"><div class=container><div class=navbar-header><button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#navbar aria-expanded=false aria-controls=navbar>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span></button>
+<a class=navbar-brand href=https://ole12138.github.io//>Jingmin's blog</a></div><div id=navbar class="navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href=https://ole12138.github.io//>Home</a></li><li><a href=/post>All posts</a></li><li><a href=/tags>Tags</a></li><li><a href=/about>About</a></li><li class=dropdown><a href=# class=dropdown-toggle data-toggle=dropdown role=button aria-expanded=false>Categories<span class=caret></span></a><ul class=dropdown-menu role=menu><li><a href=https://ole12138.github.io//categories/%E6%95%B0%E5%AD%A6>数学</a></li><li><a href=https://ole12138.github.io//categories/%E7%89%A9%E7%90%86>物理</a></li></ul></li></ul></div></div></nav><div class=container><div class=row><div class="col-sm-8 doc-main"><main role=main><article><a id=title></a><h1 class=doc-entry-title>线性代数总结</h1><div class=doc-entry-meta><span><time datetime=2020-11-25>November 25, 2020</time></span></div><section># 线性代数总结
+根据同济线性代数第一版的序言，线性代数本是高等数学第13章，后来提出来单独成书。
+线性代数分为6块内容：行列式、矩阵、向量与向量空间、方程组、特征值、二次型。
+概念互相渗透，联系紧密。
+行列式、矩阵、向量、方程组联系尤为紧密。
+向量是研究方程组的解的过程中，提炼抽象出来的。（并提出了向量的相关无关、向量的秩、矩阵的秩的概念）
+行列式和矩阵式求解方程组的过程中，提炼的工具。（消元的过程中，无法避免$ad-bc$的形式，将其定义为二阶行列式；系数与未知数的相乘并相加，系数提出来更简洁，就成了系数矩阵）
+矩阵按列分块，就变成了向量。（解方程组的问题就变成了各列向量能否线性表示b的问题）
+二次型的几何意义：空间解析几何的二次曲面。
+线性代数的难点和重点：
+| 两难一重 | | |
+| -------- | ---------------- | ---------------------------------------------------------- |
+| 重点一 | 方程组 | 有无解？有几个解？如何求解以及参数处理 |
+| 重点二 | 特征值、特征向量 | $A\alpha = \lambda \alpha$，矩阵相似，对角阵相似。综合性强 |
+| 难点 | 向量 | 线性表示、相关无关、秩 |
+线性代数的特点：
+1）概念多，定理多，运算法则多，符号多（易混淆）
+2）内容上纵横交错，知识前后联系紧密（需要编织知识网络，重视一题多解）（解法灵活多变）
+3）逻辑推理要求高（尤其是证明）
+## 向量
+### 概念,运算
+### 线性表示
+##### 问$\alpha_1, \alpha_2 ... \alpha_n$ 能否线性表示$\beta$,等于问一个非齐次方程组$(\alpha_1, \alpha_2 ... \alpha_n)X=\beta$ 有解没解的问题.
+### 线性相关与无关
+##### 线性相关与无关定义
+设$\alpha_1, \alpha_2, ... ,\alpha_n$ 为一组n维向量，如果存在一组不全为0的数$k_1, k_2, ... , k_s$，使得$k_1 \alpha_1 + k_2 \alpha_2 + ... + k_s \alpha_s = 0$ 成立，称向量组$\alpha_1, \alpha_2, ... , \alpha_s$ 线性相关；
+如果上述等式仅当$k_1 = k_2 = ... = k_s = 0$ 时成立，则称向量组$\alpha_1, \alpha_2, ... , \alpha_s$ 线性无关
+注意这里（n和s的区别）
+##### 问$\alpha_1, \alpha_2 ... \alpha_n$ 是否线性相关,等于问一个齐次方程组$(\alpha_1, \alpha_2 ... \alpha_n)X=0$ 有解没解(是否只有0解)的问题.
+n维向量的向量组 $\alpha_{1}, \alpha_{2} \cdots \alpha_{m}$ 线性相关
+$\Leftrightarrow$ $\exists$ 不全为0的 $k_{1} k_{2} \cdots k_{m}$ , s.t. $k_1 \alpha_1 + k_2 \alpha_2 + \cdots + k_m \alpha_m = 0$
+$\Leftrightarrow$ $\exists$ 不全为0的 $k_{1} k_{2} \cdots k_{m}$ , s.t. $\left[\alpha_{1} \alpha_{2} \cdots \alpha_{m}\right]\left[\begin{array}{l}{k_{1}} \\
+{k_{2}} \\
+{k_{m}}\end{array}\right]=0$
+$\leftrightarrow$ $\left[\alpha_{1} \alpha_{2} \cdots \alpha_{m}\right]\left[\begin{array}{l}{x_{1}} \\
+{x_{2}} \\
+{x_{m}}\end{array}\right]=0$ 存在非0解
+$\Leftrightarrow$ $r\left(\alpha_{1} \alpha_{2} \cdots \alpha_{m}\right)<m$ 推论 1. n个n维向量$\alpha_1, \alpha_2 ... \alpha_n$ 相关 $\leftrightarrow$ $|\alpha_1, \alpha_2 ... \alpha_n|=0$ 2. n+1个n维向量必线性相关 3. $\alpha_1, \alpha_2 ... \alpha_s$ 相关,则$\alpha_1, \alpha_2 ... \alpha_s ... \alpha_{s+r}$ 必相关 i.e. 方程组有非0解,添加几个未知数之后仍有非0解 4. 低维向量线性无关,那么添加维度(坐标)后的高维向量也无关 e.g. ![也是求齐次方程组基础解系的原理](https://picgo12138.oss-cn-hangzhou.aliyuncs.com/md/20191210133418.png) ##### 低维向量线性相关的几何意义 ###### 两个三维向量线性相关,表示向量共线(坐标成比例); ###### 三个三维向量线性相关,表示共面(坐标成比例) ### 秩 ##### 极大线性无关组 设$\alpha_1, \alpha_2, .. \alpha_s$ 是一个n维向量组，如果向量组中有r个向量线性无关，且向量的任意$r+1$个向量线性相关，则这r个线性无关的向量称为向量组$\alpha_1, \alpha_2, .. \alpha_s$ 的极大线性无关组 ##### 向量组的秩 向量组$\alpha_1, \alpha_2, .. \alpha_s$的**极大线性无关组中所含有向量的个数**称为此向量组的秩，记作$r(\alpha_1, \alpha_2, .. \alpha_s)$ 如果一个向量组仅含有零向量，则规定它的秩为0 [等价的向量组](# 等价矩阵)具有相同的秩 ##### 矩阵的秩 矩阵列向量组的秩，或者矩阵行向量组的秩，称为矩阵的秩 矩阵的秩也可以认为是不为0的余子式的最大阶数 ##### 矩阵与向量的秩的关联 ###### $r(a)="A的列秩=A的行秩$" 矩阵等价,秩相等. 向量组等价,秩相等;秩相等,向量组不一定等价. ##### 矩阵秩公式 $r(a^t)=r(A)$ $r(a+b)\le r(a)+r(b)$ $r(ka)=r(A)$ [$r(ab)\le min(r(a),r(b))$](http://ask.koolearn.com/new/q/1743493) 若a可逆,则 $r(ab)=r(B), r(ba)=r(B)$ $r(aa^t)=r(A)$ 设[a-mxn, b-nxs, 且$ab=0$, 则$r(a)+r(b) \le n$](https://zhidao.baidu.com/question/1771834549742172660) $\left[\begin{matrix} a & o \\ o & b\end{matrix}\right]=r(A)+r(B)$ ###### 定理:经过初等变换,矩阵的秩不变. ### 向量空间 ##### 运算封闭 若从某个非空数集中任选两个元素（同一元素可重复选出），选出的这两个元素通过某种（或几种）*运算*后的得数仍是该数集中的元素，那么，就说该集合*对于*这种（或几种）*运算是封闭的* ##### 向量空间 设s是**n维向量的非空集合**,且s中向量**对于加法和数乘运算是封闭**的,则称s构成一向量空间 ##### 子空间 ##### 基底 若$\alpha_1, \alpha_2, ... \alpha_n$ 为向量空间**s中的一个线性无关的向量组**, 且**s中任一向量可由$\alpha_1, \alpha_2, ... \alpha_n$ 线性表示**, 称$\alpha_1, \alpha_2, ... \alpha_n$ 为向量空间中的一个基底 ##### 向量空间的维数 向量空间中,**基底所含向量的个数**,称为此向量空间的维数. 若$\alpha_1, \alpha_2, ... \alpha_n$ 为向量空间s的一个基底,则其维数为n, 称为n维向量空间, 记为$r^n$ ##### 坐标 ##### 基变换与坐标变换 ##### 内积 设向量: $\alpha=\left( \begin{array} { c } { a _ { 1 } } \\ { a _ { 2 } } \\ { \vdots } \\ { a _ { n } } \end{array} \right) , \boldsymbol { \beta }=\left( \begin{array} { c } { b _ { 1 } } \\ { b _ { 2 } } \\ { \vdots } \\ { b _ { n } } \end{array} \right)$ 则$\alpha$ 与$\beta$ 内积为: $( \boldsymbol { \alpha } , \boldsymbol { \beta } )=\boldsymbol { \alpha } ^ { \mathrm { t } } \boldsymbol { \beta }=\left( a _ { 1 } , a _ { 2 } , \cdots , a _ { n } \right) \left[\begin{array}{}{ b _ { 1 } }\\ { \vdots } \\ { b _ { n } } \end{array}\right]=a _ { 1 } b _ { 1 } + a _ { 2 } b _ { 2 } + \cdots + a _ { n } b _ { n }$ 向量的长度: $| \boldsymbol { \alpha } |=\sqrt { a _ { 1 } ^ { 2 } + a _ { 2 } ^ { 2 } + \cdots + a _ { n } ^ { 2 } }$ 内积性质: $\begin{array} { l } { ( \boldsymbol { \alpha } , \boldsymbol { \beta } )=( \boldsymbol { \beta } , \boldsymbol { \alpha } ) } \\ { \boldsymbol { \alpha }=\boldsymbol { 0 } \leftrightarrow ( \boldsymbol { \alpha } , \boldsymbol { \alpha } )=0 } \\ { ( \boldsymbol { \alpha } , \boldsymbol { \beta } + \boldsymbol { \gamma } )=( \boldsymbol { \alpha } , \boldsymbol { \beta } ) + ( \boldsymbol { \alpha } , \boldsymbol { \gamma } ) } \end{array}$ ##### 正交 若两向量内积为0,则这两个向量正交 i.e. $( \boldsymbol { \alpha } , \boldsymbol { \beta } )=a _ { 1 } b _ { 1 } + a _ { 2 } b _ { 2 } + \cdots + a _ { n } b _ { n }=0$, 则 $\alpha$ 与 $\beta$正交 ##### 施密特正交化方法 设$\alpha_1, \alpha_2, ..., \alpha_s$ 为$r^s$ 中一组线性无关的向量 令: $\begin{array} { l } { \beta _ { 1 }=\alpha _ { 1 } } \\ { \beta _ { 2 }=\alpha _ { 2 } - \frac { \left( \alpha _ { 2 } , \beta _ { 1 } \right) } { \left( \beta _ { 1 } , \beta _ { 1 } \right) } \beta _ { 1 } } \\ { \cdots } \\ { \beta _ { s }=\alpha _ { s } - \frac { \left( \alpha _ { s } , \beta _ { 1 } \right) } { \left( \beta _ { 1 } , \beta _ { 1 } \right) } \beta _ { 1 }\cdots - \frac { \left( \alpha _ { s } , \beta _ { s - 1 } \right) } { \left( \beta _ { s - 1 } , \beta _ { s - 1 } \right) } \beta _ { s - 1 } } \end{array}$ 则 $\beta_1, \beta_2, ... \beta_s$ 相互正交 ##### 规范正交基 设 $\alpha_1, \alpha_2, ..., \alpha_n$ 为$r^n$ 中**一组基(底)** 将其(施密特)**正交化**得 $\beta_1, \beta_2, ..., \beta_n$ 再将其**单位化**得$\boldsymbol { \eta } _ { 1 }=\frac { \boldsymbol { \beta } _ { 1 } } { \left| \boldsymbol { \beta } _ { 1 } \right| }, \eta _ { 2 }=\frac { \beta _ { 2 } } { \left| \beta _ { 2 } \right| } , \cdots , \eta _ { n }=\frac { \beta _ { n } } { \left| \beta _ { n } \right| }$ 则$\eta_1, \eta_2, ... , \eta_n$ 满足 $(\eta_i, \eta_j)=0, i \neq j ; |\eta_i|=1, i=1,2, ... , n$ 称$\eta_1, \eta_2, ... , \eta_n$ 为 $r^n$ 中的一组规范正交基 ##### 正交矩阵 ###### 定义 设 $\eta_1, \eta_2, ... , \eta_n$ 为 $r^n$ 中的一组规范正交基,令$q=[\eta_1, \eta_2, ... , \eta_n]$ , 则q满足$q^t q=Q q^t=E$ , 称为正交矩阵 如果n阶矩阵a满足$a^t a=E$， 即($a^{-1}=A^T$),那么称A为正交矩阵，简称正交阵 方阵a为正交矩阵$\leftrightarrow$ a的列向量/行向量都是单位向量，且两两正交 ###### 正交矩阵性质: $\begin{array} { l } { q ^ { \mathrm { t } }=Q ^ { - 1 } \quad (q^t q=E)} \\ { | q |=\pm 1 } \end{array}$ 若$q_1, q_2$ 为正交矩阵, 则 $q_1, q_2$仍为正交矩阵 [相关链接:相似矩阵与二次型的转换](https://blog.csdn.net/u012532559/article/details/44872181) ## 线性方程组 ### 线性方程组概念 ##### 线性方程组同解变形(矩阵行变换) 1. 两个方程互换位置 2. 非零常数乘到方程的两端 3. 某方程的k被加到另一个方程上 ### 齐次方程组$ax=0$ #### 无解,0解(唯一解),非零解 ###### 定理 齐次方程组$a_{m\times n}x=0$ 有非零解 $\leftrightarrow$ $r(a)<n$ 推论 当$m<n$ 时, $ax=0$ 必有非零解 (i.e. 方程组数小于未知数个数) 推论 当m=n时, $ax=0$ 有非零解 $\leftrightarrow$ $|a|=0$ ##### 解的性质 if $\eta$ is solution of $ax=0$ , then $k\eta$ is solution, too. if $\eta_1, \eta_2$ is solution of $ax=0$, then $k_1\eta_1 + k_2\eta_2$ is solution, too. #### 基础解系 ###### 齐次方程组的基础解系:方程组解向量的极大线性无关组 i.e. 1. $\eta_1, \eta_2, ... \eta_t$ 是 $ax=0$ 的解 2. $\eta_1, \eta_2, ... \eta_t$ 线性无关 3. $ax=0$ 的任意一个解都可以由 $\eta_1, \eta_2, ... \eta_t$ 线性表出 ##### 齐次方程组解向量的极大线性无关组(基础解系)个数$n-r(a)$ 定理 如果齐次方程组 $ax=b \quad(ii)$ 系数矩阵的秩 $r(a)="r<n$" , 则$ii$ 有 $n-r$ 个线性无关的解,且 $ii$ 的任意一个解都可以由这$n-r$ 个线性无关的解(基础解系)线性表出 定理 若 $\eta_1, \eta_2, \cdot\cdot\cdot \eta_t$ 是齐次方程组 $ii$ 的基础解系,则 $ii$ 的通解是是: $k_1 \eta_1 + k_2 \eta_2 + \cdot \cdot \cdot + k_t \eta_t$, $k_1, k_2, ... , k_t$ 是任意常数 #### 相关无关 在向量组部分介绍过了: [向量的相关无关](#线性相关与无关) ### 非齐次方程组$ax=b$ ##### 有解判定: 无解,唯一解, 无穷多解 定理 $a x=b$ 有解 $\leftrightarrow r(a)=r(\overline a)$ 唯一解: $r(a)="r(\bar{A})=n$" $\infty$ 解: $r(a)="r(\bar{A})<n$" 无解: $r(a)+1=r(\bar{A})$ ##### 解的形式 ###### 解的性质 ![](https://picgo12138.oss-cn-hangzhou.aliyuncs.com/md/20191210143620.png) ![](https://picgo12138.oss-cn-hangzhou.aliyuncs.com/md/20191210143727.png) ![这条是齐次方程组的性质](https://picgo12138.oss-cn-hangzhou.aliyuncs.com/md/20191210143956.png) ###### 解的结构 定理 设$\alpha$ 是方程组$ax=b$ 的解, $\eta_{1}, \eta_{2}, \cdots, \eta_{t}$ 是导出组$ax=0$ 的基础解系,则方程组$ax=b$ 的通解为 $\alpha+k_{1} \eta_{1}+k_{2} \eta_{2} \cdots+k_{t} \eta_{t}$ , 其中 $k_{1} k_{2} \cdots k_{t}$ 是任意常数 求解非齐次方程组做两件事:非齐次方程组求一个特解,求齐次方程组的基础解系,并用k衔接 ### 公共解,同解 ### 应用 1. 相关无关$\leftrightarrow$ 齐次方程组 $(\alpha_1, \alpha_2, \cdot\cdot\cdot \alpha_s)x=0$有非零解 2. 线性无关$\leftrightarrow$ 非齐次方程组 $(\alpha_1, \alpha_2, \cdot\cdot\cdot \alpha_s)x=\beta$ 有没有解 3. $ap=B\neq p$ 4. $a \alpha=\lambda x$ 求x ## 特征值与特征向量 ##### 定义 $a \alpha=\lambda \alpha, \alpha \neq 0$, 注意特征向量不为0 说明（标准定义）： 设a是n阶矩阵, $\alpha$是n维非0列向量,满足: $a \alpha=\lambda \alpha$, 则称$\lambda$是矩阵a的特征值, $\alpha$是矩阵a属于特征值$\lambda$的特征向量 ##### 性质 $a \alpha=\lambda \alpha, \alpha \neq 0 \rightarrow (a+k e) \alpha=(\lambda+k) \alpha$ $a \alpha=\lambda \alpha, \alpha \neq 0 \rightarrow a^{n} \alpha=\lambda^{n} \alpha$ $|a|=\prod \lambda$[^3] [^3]: [矩阵特征值乘积等于矩阵行列式乘积的证明](https://www.zhihu.com/question/304671751) $a \alpha=\lambda \alpha, \alpha \neq 0 \rightarrow a^{-1} \alpha=\frac{1}{\lambda} \alpha$ 若a可逆, $\lambda$ 是a的特征值, 则 $\frac{|a|}{\lambda}$ 是$a^*$ 的特征值 性质总结： 设$\lambda$是矩阵a的特征值，则矩阵$ka, a^2, aa+be, a^m, a^{-1}, a*$ ， 分别有特征值 $k\lambda, \lambda^2, a\lambda+b, \lambda^m, \frac{1}{\lambda}, \frac{|a|}{\lambda}$ 设$\alpha$是a对应$\lambda$的特征向量，则$\alpha$也是矩阵$ka, a^2, aa+be, a^m, a^{-1}, a*$对应特征值$k\lambda, \lambda^2, a\lambda+b, \lambda^m, \frac{1}{\lambda}, \frac{|a|}{\lambda}$的特征向量 [不同特征值的特征向量必正交](https://zhuanlan.zhihu.com/p/30454490) [特征值之和等于矩阵的迹](https://www.zhihu.com/question/267405336) ##### 求特征值与特征向量 利用定义与性质 利用定义式的变形得行列式求特征值（解行列式=0） $\begin{array}{l}{ {\left(\lambda_{i} e-a\right) x=0} \quad (x \neq 0)\\ \rightarrow | \lambda e-a |=0} \\ \end{array}$ 再分别代入特征值$\lambda_i$， 利用定义式的变形求特征向量（解齐次方程组） ${\left(\lambda_{i} e-a\right) x=0} \quad (x \neq 0)$ ### 相似矩阵 ##### 定义: $a \sim b:$ a, b都是n阶方阵, $\exists$ 可逆$p, p^{-1} a p=B$ , 称a相似于b $a \sim \lambda$ ##### 矩阵相似的性质: - $a \sim a$ - $a \sim b \rightarrow b \sim a$ - $a \sim b, b \sim c \rightarrow a \sim c$ (e.g. $a \sim \lambda, b \sim \lambda \rightarrow a \sim b$ 多用来证明) - $a \sim b \rightarrow a + ke \sim b + ke$ <small><span style=color:gray>proof: $P ^ { - 1 } ( A + k E ) P = P ^ { - 1 } A P + P ^ { - 1 } k E P = B + k E$</span></small>
+- $A \sim B \Rightarrow A^n \sim B^n$
+<small>proof: $A \sim B \Rightarrow P^{-1}AP=B \quad (两边平方) \Rightarrow (P^{-1}AP)^2=B^2 \\$, 数学归纳得原式</small>
+- $A \sim B \Rightarrow \begin{equation}
+|\lambda E-A|=|\lambda E-B| \Rightarrow \lambda_{A}=\lambda_{B}
+\end{equation}$
+<small>proof:
+$\begin{aligned}|\lambda E-B| &=\left|\lambda E-P^{-1} A P\right| \\ &=\left|P^{-1}(\lambda E-A) P\right| \\ &=\left|P^{-1}\right|\cdot|\lambda E-A|\cdot|P| \\ &=|\lambda E-A| \end{aligned}$</small>
+- $A \sim B \Rightarrow r(A)=r(B)$
+<small>proof: $r(B)=r\left(P^{-1} A P\right) \\
+=r(A P) \\
+=r(A)$</small>
+- $A \sim B \Rightarrow |A|=|B|$
+<small>proof: $|B|=|P^{-1} A P| = |P^{-1} | \cdot |A| \cdot |P| = |A|$</small>
+- $A \sim B \Rightarrow \sum a_{i i}=\sum b_{i i}$ (迹的和相等)
+即：A相似B，{反身，传递，倍加E，n次}仍相似，相似则{特征值，秩，行列式，迹}相等。
+##### 性质推广
+$A \sim B \Rightarrow A^{-1} \sim B^{-1}$
+证明：<br>$\begin{array}{l}{\left(P^{-1} A P\right)^{-1}=B^{-1}} \\ {P^{-1} A^{-1}\left(P^{-1}\right)^{-1}=B^{-1}} \\ {P^{-1} A^{-1} P=B^{-1}} \\ {\therefore A^{-1} \sim B^{-1}}\end{array}$
+- $A \sim B \Rightarrow A^T \sim B^T $
+证明:<br>令$\left(P^{T} \right)^{-1}=P_1$<br>则$P_1^{-1} A^T P_1 = B^T$
+- $A \sim B \Rightarrow A^* \sim B^*$
+- 若$\mathbf{A} \sim \boldsymbol{B}, \boldsymbol{C} \sim \boldsymbol{D}$， 则$\left[\begin{array}{ll}{A} & {0} \\ {0} & {C}\end{array}\right] \sim\left[\begin{array}{ll}{B} & {0} \\ {0} & {D}\end{array}\right]$
+- 若$\mathbf{A} \sim B$，则$f(\boldsymbol{A}) \sim f(\boldsymbol{B}),|f(\boldsymbol{A})|=|f(\boldsymbol{B})|$，其中$f(\boldsymbol{A})$为矩阵
+##### 相似对角化
+相似对角化$P^{-1} A P = \Lambda$的方法
+设$\alpha _ { 1 } , \alpha _ { 2 } , \cdots , \alpha _ { n }$为对应于特征值$\lambda_i(i=1,2,...,n)$的特征向量
+$\begin{aligned} A \left( \alpha _ { 1 } , \alpha _ { 2 } , \cdots , \alpha _ { n } \right) & = \left( A \alpha _ { 1 } , A \alpha _ { 2 } , \cdots , A \alpha _ { n } \right) \\ & = \left( \lambda _ { 1 } \alpha _ { 1 } , \lambda _ { 2 } \alpha _ { 2 } , \cdots , \lambda _ { n } \alpha _ { n } \right) \\
+& =\left[ \boldsymbol { a } _ { 1 } , \boldsymbol { \alpha } _ { 2 } , \cdots , \boldsymbol { \alpha } _ { n } \right] \left[ \begin{array} { c c c c } { \lambda _ { 1 } } \\ { } & { \lambda _ { 2 } } \\ { } & { } & { \ddots } \\ { } & { } & { } & { \lambda _ { n } } \end{array} \right] \end{aligned}$
+记$P = \left[ \alpha _ { 1 } , \alpha _ { 2 } , \cdots , \alpha _ { n } \right]$,
+记$\boldsymbol { \Lambda } = \left[ \begin{array} { c c c c } { \lambda _ { 1 } } \\ { } & { \lambda _ { 2 } } \\ { } & { } & { \ddots } \\ { } & { } & { } & { \lambda _ { n } } \end{array} \right]$，
+则$P^{-1} A P = \Lambda$
+##### 性质
+$A \sim \Lambda \Leftrightarrow $ A有n个线性无关的特征向量
+$\lambda$是k重特征值，则 $\lambda$有k个无关的特征向量 $\Leftrightarrow A \sim \Lambda$
+A有n个不同的特征值$ \Rightarrow A \sim \Lambda$
+A为对称矩阵 $\Rightarrow A \sim \Lambda$
+**若$P^{-1} A P = \Lambda$， 则$\Lambda$的主对角线上元素就是A的特征值，P的列向量就是A的特征向量**[^2]
+[^2]:这也是**构造可逆矩阵P和对角矩阵$\Lambda$的方法**
+相似对角化可以用来求方阵的n次
+### 实对称矩阵
+如果有n阶[矩阵](https://baike.baidu.com/item/矩阵)A，其矩阵的元素都为实数，且矩阵A的转置等于其本身（$a_{ij}=a_{ji}$）(i,j为元素的脚标），则称A为实对称矩阵（即$A^T=A$且元素为实数的矩阵）
+##### 特点
+特征值必是实数
+[不同特征值的特征向量必正交](https://zhuanlan.zhihu.com/p/30454490)
+必与对角矩阵相似
+可用正交矩阵相似对角化[^1]
+[^1]: （一般的相似对角化是用特征向量可逆矩阵来实现相似对角化）
+##### 实对称矩阵用正交矩阵对角化的方法
+1. 求A的特征值$\lambda_1, \lambda_2, ... \lambda_n$
+2. 求特征向量$\alpha_1, \alpha_2 , ... \alpha_n$
+3. 改造特征向量为$\gamma_1, \gamma_2, ... , \gamma_n$
+1. 如$\lambda_i \neq \lambda_j$， 只需单位化
+2. 如$\lambda_i = \lambda_j$
+1. 若$(\alpha_i, \alpha_j) = 0$， 只需单位化
+2. 若$\alpha_i, \alpha_j) \neq 0$， 施密特正交化，单位化
+4. 构造正交矩阵$Q=(\gamma_1, \gamma_2, ... , \gamma_n)$
+5. 得$Q^{-1} A Q = \Lambda = \left[ \begin{array} { c c c c } { \lambda _ { 1 } } & { 0 } & { \cdots } & { 0 } \\ { 0 } & { \lambda _ { 2 } } & { \cdots } & { 0 } \\ { \vdots } & { \vdots } & { \vdots } & { \vdots } \\ { 0 } & { 0 } & { \cdots } & { \lambda _ { n } } \end{array} \right]$
+## 二次型
+### 概念、定理
+##### 二次型及其矩阵表示
+设一个多元函数，其每一项都是二次的，这样的多元函数，称作二次型；任何一个二次型都可以用矩阵的乘法描写出来。
+##### 二次型矩阵化
+n元二次型
+$f(x_1, x_2,...,x_n) = \Sigma{C_{ii} x_i x_i} + \Sigma{C_{ij} x_i x_j} \\
+= [x_1, x_2, ... , x_n] A [x_1, x_2, ... , x_n]^T \\
+= x^T A x$
+其中A为一个对称矩阵，有
+$A(i,i) = C_{ii},\\
+A(i,j) = A(j,i) = C_{ij}/2$
+函数f的平方项$C_{ii} x_i x_i$系数依次填入对称矩阵P的对角线，函数f的混合项$C_{ij} x_i x_j$系数除以2，分别填入矩阵A对应位置
+这里的矩阵A称为二次型的矩阵
+i.e. 一个三元二次型：
+$\begin{aligned} f\left(x_{1}, x_{2}, x_{3}\right)=& x_{1}^{2}+5 x_{2}^{2}+5 x_{3}^{2}+2 x_{1} x_{2}-6 x_{2} x_{3} \\ &=\left[x_{1} x_{2} x_{3}\right]\left[\begin{array}{ccc}{1} & {1} & {0} \\ {1} & {5} & {-3} \\ {0} & {-3} & {5}\end{array}\right]\left[\begin{array}{c}{x_{1}} \\ {x_{2}} \\ {x_{3}}\end{array}\right] \end{aligned}$
+##### 标准型
+**只有平方项**，没有混合项的二次型
+则标准型对应的矩阵是个**对角矩阵**
+##### 规范型
+平方项系数只能为0，+1，-1的标准型
+##### 惯性指数
+正惯性指数： 标准型中正的二次项个数
+负惯性指数： 标准型中负的二次项个数
+##### 二次型的秩
+$r(f)=r(A)$
+##### 坐标变换
+以3元坐标为例：
+$\left\{\begin{array}{l}{x_{1}=c_{11} y_{1}+c_{12} y_{1}+c_{13} y_{3}} \\ {x_{2}=c_{21} y_{1}+c_{22} y_{2}+c_{23} y_{3}} \\ {x_{3}=c_{31} y_{1}+c_{32} y_{2}+c_{33} y_{3}}\end{array} \quad|C| \neq 0\right.$
+$\left[\begin{array}{l}{x_{1}} \\ {x_{2}} \\ {x_{3}}\end{array}\right]=\left[\begin{array}{lll}{C_{11}} & {C_{12}} & {C_{13}} \\ {C_{21}} & {C_{22}} & {C_{23}} \\ {C_{31}} & {C_{32}} & {C_{33}}\end{array}\right]\left[\begin{array}{l}{y_{1}} \\ {y_{2}} \\ {y_{3}}\end{array}\right]$
+那么通过坐标变换 $x=Cy$，把坐标x用矩阵C变换为了y的坐标，这里要求C可逆
+对二次型做坐标变换：
+$\left\{ \begin{array} { l } { f ( x ) = x ^ { T } A x } \\ { x = C y , | C | \neq 0 } \end{array} \right.$
+$\Rightarrow \\
+\begin{aligned} g ( y ) = f \left( C _ { y } \right)
+& = \left( C y \right) ^ { T } A \left( C y \right) \\
+& = y ^ { T } C ^ { T } A C y \\ 
+& = y ^ { T } B y \end{aligned}$
+其中$B=C^T A C$
+##### 矩阵合同
+由对二次型的[坐标变换](# 坐标变换)可知，坐标变换${ x = C y , | C | \neq 0 } $时， 二次型的矩阵A也变为B，并满足$B=C^T A C$
+###### 定义
+如果$C^{T} A C=B$， 其中C是可逆矩阵，称矩阵A和B合同，记$A \simeq B$
+$A \simeq B \Leftrightarrow $ $x^T A x $ 与 $x^T B x$ 正负惯性指数相同
+###### 性质
+$A \simeq A$
+如果$A \simeq B$， 则$B \simeq A$
+如果$A \simeq B, B \simeq C$，则$A \simeq C$
+任一实对称矩阵必合同于一个对角矩阵
+###### 定理 $x^T A x $ 经坐标变换$x=Cy$， 有$x^T A x = y^T B y$， 其中$C^T A C = B$
+即二次型经坐标变换，二次型的矩阵变换为它的合同矩阵
+###### 定理 对任意$x^T A x$， 都存在坐标变换$x=Cy$，使得$f=y^T \Lambda y$
+即任意二次型都可以找到坐标变换，化为标准型
+###### 定理 （惯性定理） 对于一个二次型$x^T A x$，经坐标变换化为标准型，其正惯性指数和负惯性指数都是唯一确定的
+二次型变换为标准型的方法是不唯一的，即可能化为不同的标准型。但是这些标准型的正惯性指数和负惯性指数都是唯一确定的。
+### 二次型变换为标准型
+##### 配方法
+##### 正交变换法
+1. 求特征值$\lambda_1, \lambda_2, ... , \lambda_n$
+2. 求特征向量$\alpha_1, \alpha_2, ... , \alpha_n$
+3. 改造特征向量（正交化，单位化）为$\gamma_1, \gamma_2, ... , \gamma_n$
+1. 特征值不同，特征向量已正交，只需单位化
+2. 特征值有重根
+1. 该特征值的多个特征向量正交，只需单位化
+2. 该特征值的多个特征向量不正交，施密特正交化，并单位化
+4. 拼称正交矩阵$Q=(\gamma_1, \gamma_2, ..., \gamma_n)$
+5. 令$x=Qy$， 得$x^T A x = y^T \Lambda y, \Lambda = \left[ \begin{array} { c c c c } { \lambda _ { 1 } } & { 0 } & { \cdots } & { 0 } \\ { 0 } & { \lambda _ { 2 } } & { \cdots } & { 0 } \\ { \vdots } & { \vdots } & { \vdots } & { \vdots } \\ { 0 } & { 0 } & { \cdots } & { \lambda _ { n } } \end{array} \right]$
+简证：正交矩阵Q有$Q^T = Q^{-1}$的性质，结合[相似对角化](# 相似对角化)的证明过程，可知以上正交变换法是正确的
+### 正定二次型
+---
+##### 正定二次型定义
+$\forall x = (x_1, x_2, ... , x_n)^T \neq 0$，恒有$f(x_1, x_2, ... , x_n) = x^T A x > 0$， 则称f为**正定二次型**，A为**正定矩阵**
+##### 性质
+合同变换不改变二次型的正定性
+$x^T A x$正定二次型
+$\Leftrightarrow$ 正惯性指数p=n
+$\Leftrightarrow$ $A \simeq E \quad (i.e. \exists |C| \neq 0, C^T A C = E)$
+$\Leftrightarrow$ A的特征值全大于0
+$\Leftrightarrow$ A的顺序主子式全大于0
+$\Leftrightarrow$ 存在可逆矩阵P，使$A = P^T P$
+$\Leftrightarrow$ 存在正交矩阵Q，使$\boldsymbol{Q}^{\mathrm{T}} \boldsymbol{A Q}=\boldsymbol{Q}^{-1} \mathrm{AQ}=\left[\begin{array}{ccc}{\lambda_{1}} & {} & {} \\ {} & {\lambda_{2}} & {} \\ {} & {} & {\ddots} & {} \\ {} & {} & {} & {\lambda_{n}}\end{array}\right], \lambda_{i}>0(i=1,2, \cdots, n)$
+若A为正定矩阵，则$k \mathbf{A}(k>0), \mathbf{A}^{\mathrm{T}}, \mathbf{A}^{-1}, \mathbf{A}^{*}$也是正定矩阵[^4]
+若A为正定矩阵，则$|A|>0$，从而A可逆
+若A为正定矩阵，则A的主对角线上元素$a_{i i}>0, i=1,2, \cdots, n$
+[^4]: A正定，证明$A^{-1}$正定
+1. $(A^{-1})^T = (A^T)^{-1} \overset{A \text{正定}}{=} A^{-1}$
+所以$A^{-1}$是对称矩阵
+2. 设$\lambda$是$A^{-1}$的特征值， $\alpha$是对应的特征向量
+$\therefore A^{-1} \alpha = \lambda \alpha$
+$\because$ A正定，其特征孩子全大于0
+$\therefore$ A的特征值$\frac{1}{\lambda} > 0$
+$\therefore \lambda > 0$
+$\therefore A^{-1}$正定
+## 易混概念辨析
+#### 矩阵等价,合同,相似
+[矩阵等价](#等价矩阵) : 对同型矩阵A、B，存在可逆阵P和Q，使得B=PAQ
+充要条件：A和B的秩相等
+理解: 初等变换(行/列变换), 不改变矩阵的秩,变换前后的矩阵等价
+[矩阵合同](# 矩阵合同): 对同型方阵A、B，存在可逆阵P, 使得$B=P^T A P$
+[矩阵相似](# 相似矩阵): 对同型方阵A、B，存在可逆阵P, 使得$B=P^{-1}AP, \quad B=P^{-1}AP$
+###### 三者关系：
+等价（只有秩相同）–>合同（秩和正负惯性指数相同）–>相似（秩，正负惯性指数，特征值均相同），矩阵亲密关系的一步步深化。
+相似矩阵必为等价矩阵，但等价矩阵未必为相似矩阵
+PQ=EPQ=E 的等价矩阵是相似矩阵
+合同矩阵必为等价矩阵，等价矩阵未必为合同矩阵
+正惯性指数相同的等价矩阵是合同矩阵
+合同矩阵未必是相似矩阵
+相似矩阵未必合同
+正交相似矩阵必为合同矩阵，正交合同矩阵必为相似矩阵
+如果A与B都是n阶实对称矩阵，且有相同的特征根．则A与B既相似又合同
+#### 方程组系数矩阵的秩,方程组解的秩
+对于齐次方程组:
+$$
+\left\{ \begin{array} { l } { x _ { 1 } - x _ { 2 } + 2 x _ { 3 } - 3 x _ { 4 } = 0 } \\
+{ 2 x _ { 1 } - 2 x _ { 2 } + 4 x _ { 3 } + 6 x _ { 4 } = 0 } \end{array} \right.
+$$
+其系数矩阵:
+$$
+A=\left[\begin{array}{rrrr}{1} & {-1} & {2} & {-3} \\
+{2} & {-2} & {4} & {6}\end{array}\right]\rightarrow\left[\begin{array}{rrrr}{1} & {-1} & {2} & {-3} \\
+{0} & {0} & {0} & {12}\end{array}\right]\rightarrow\left[\begin{array}{rrrr}{1} & {-1} & {2} & {0} \\
+{0} & {0} & {0} & {1}\end{array}\right]
+$$
+
+系数矩阵A的秩:$r(A)=2$
+方程组系数矩阵A(或者A的列向量)的极大线性无关组:
+$\left[\begin{array}{l}{1} \\
+{2}\end{array}\right],\left[\begin{array}{r}{-3} \\
+{6}\end{array}\right]$
+方程组极大线性无关组(基础解系)个数，即解的秩: $n-r(A)=4-2=2$
+$\begin{array}{l}{x_{2}=1, x_{3}=0} \\
+\quad \rightarrow {\eta_{1}=(1,1,0,0)^{T}} \\
+{x_{2}=0, x_{3}=1} \\
+\quad \rightarrow {\eta_{2}=(-2,0,1,0)^{T}}\end{array}$
+方程组解向量的极大线性无关组(基础解系):
+$\left[\begin{array}{c}{1} \\
+{1} \\
+{0} \\
+{0}\end{array}\right],\left[\begin{array}{c}{-2} \\
+{0} \\
+{1} \\
+{0}\end{array}\right]$
+#### 秩,极大线性无关组个数,系数矩阵的秩，方程组的基础解系
+[线性无关(组)](#线性相关与无关定义)：仅当$k_1 = k_2 = ... = k_s = 0$ 时, 得$k_1 \alpha_1 + k_2 \alpha_2 + ... + k_s \alpha_s = 0$ 成立，称向量组$\alpha_1, \alpha_2, ... , \alpha_s$ 线性无关
+[极大线性无关组](# 极大线性无关组)：向量组中有r个向量线性无关，且向量的任意$r+1$个向量线性相关，这r个线性无关的向量称为向量组的极大线性无关组
+[秩](# 秩)： 极大线性无关组中向量的个数
+(方程组$Ax=\beta$的)系数矩阵：A
+(方程组$Ax=\beta$的)增广矩阵：$(A|\beta)$
+(方程组$Ax=\beta$的)基础解系：方程组解空间的极大线性无关组
+(方程组$Ax=\beta$的)系数矩阵的秩：$r(A)$
+(方程组$Ax=\beta$的)基础解系的秩：$n-r(A)$
+#### 行列式同等变形, 矩阵行/列变换, 方程组同解变形
+##### 说明
+(行/列)倍乘: 非零元素乘以某一行(列)
+(行/列)倍加: 非零元素乘以某一行(列),加到另一行(列)上
+(行/列)互换: 某一行(列)与另一行(列)位置互换
+##### 区别
+###### 矩阵行/列变换
+不是同等变形(变形前后不是"="关系)
+变换规则:倍乘, 倍加, 互换
+有些情况只能行变换
+e.g. 增广矩阵变换$(A|\beta) \rightarrow (E|\beta')$, 矩阵求逆$(A|E)\rightarrow (E|A^{-1})$
+###### 行列式同等变形
+是同等变形
+变形规则: (行/列)倍乘, (行/列)倍加, (行/列)互换(互换位置行列式取反)
+###### 方程组同解变形
+是同等变形
+变形规则: 行倍乘, 行倍加, 行互换
+[线性相关]:
+[线性表示]:
+[极大线性无关组]:</section></article></main></div><div class="col-sm-3 col-sm-offset-1 doc-sidebar"><div id=sidebar><div class=sidebar-module><div class=sidebar-toc><h4 class=sidebar-heading>Table of Contents</h4><ul><li><strong><a href=#title>线性代数总结</a></strong></li></ul></div></div><div class=sidebar-module><h4 class=sidebar-heading>Pages in Categories</h4><ul class=sidebar-category-list><li><a href=https://ole12138.github.io//categories/%E6%95%B0%E5%AD%A6><span class=doc-list-category>数学</span></a><ul><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%BA%94%E7%94%A8-%E5%8D%95%E8%B0%83%E6%80%A7%E4%B8%8E%E6%9E%81%E5%80%BC/>一元函数微分学-单调性与极值</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%BA%94%E7%94%A8-%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/>一元微分学-可导函数的中值定理</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86%E4%B9%A0%E9%A2%98/>一元微分学-导数与微分习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%AF%BC%E6%95%B0%E5%92%8C%E5%BE%AE%E5%88%86/>一元微分学-导数和微分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%BA%94%E7%94%A8-%E5%BC%A7%E5%BE%AE%E5%88%86%E4%B8%8E%E6%9B%B2%E7%8E%87/>一元微分学-导数的应用</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%BA%94%E7%94%A8-%E5%8D%95%E8%B0%83%E6%80%A7%E4%B8%8E%E6%9E%81%E5%80%BC%E4%B9%A0%E9%A2%98/>一元微分学-导数的应用-单调性与极值</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%BA%94%E7%94%A8-%E5%BC%A7%E5%BE%AE%E5%88%86%E4%B8%8E%E6%9B%B2%E7%8E%87%E4%B9%A0%E9%A2%98/>一元微分学的应用-弧微分与曲率</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/>一元积分学-不定积分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E4%B9%A0%E9%A2%98/>一元积分学-不定积分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E5%AE%9A%E7%A7%AF%E5%88%86%E4%B8%8E%E5%B9%BF%E4%B9%89%E7%A7%AF%E5%88%86/>一元积分学-定积分与反常积分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E5%AE%9A%E7%A7%AF%E5%88%86%E4%B8%8E%E5%B9%BF%E4%B9%89%E7%A7%AF%E5%88%86%E4%B9%A0%E9%A2%98/>一元积分学-定积分与反常积分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E5%BA%94%E7%94%A8/>一元积分学-定积分的应用</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E5%BA%94%E7%94%A8%E4%B9%A0%E9%A2%98/>一元积分学-定积分的应用</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5-%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/>函数与极限</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5-%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90%E4%B9%A0%E9%A2%98/>函数与极限习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%BA%94%E7%94%A8-%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86%E4%B9%A0%E9%A2%98/>可导函数的中值定理习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93todo/>回归分析总结</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/>基础数学-三角函数</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E4%BB%A3%E6%95%B0/>基础数学-代数</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6-%E5%87%A0%E4%BD%95/>基础数学-几何</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E4%B8%8E%E5%90%91%E9%87%8F%E5%88%86%E6%9E%90/>多元微积分-多元微分学-向量值函数和向量分析</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%94%AF%E7%9A%84%E6%80%BB%E7%BB%93/>数学分支的总结</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/>数学物理方法总结</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/>最优化问题总结</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E4%B8%8E%E6%A6%82%E7%8E%87/>概率论与数理统计-随机事件与概率</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/>概率论与数理统计-随机变量及其分布</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93/>泛函分析</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7/>线性代数-向量组的线性相关性</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%9E%8B%E4%B9%A0%E9%A2%98/>线性代数-向量组的线性相关性</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7%E4%B9%A0%E9%A2%98/>线性代数-向量组的线性相关性习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%9E%8B/>线性代数-相似矩阵与二次型</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B51/>线性代数-矩阵1</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B51%E4%B9%A0%E9%A2%98/>线性代数-矩阵1习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B52%E7%9F%A9%E9%98%B5%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/>线性代数-矩阵初等变换与线性方程组习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B52%E7%9F%A9%E9%98%B5%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E4%B9%A0%E9%A2%98/>线性代数-矩阵初等变换与线性方程组习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F/>线性代数-行列式</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F%E4%B9%A0%E9%A2%98/>线性代数-行列式习题</a></li><li><span class=active>线性代数总结</span></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E5%92%8C%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E6%80%BB%E7%BB%93/>高等数学</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E8%84%89%E7%BB%9C/>高等数学-一元微积分-脉络</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%90%91%E9%87%8F%E4%BB%A3%E6%95%B0%E4%B8%8E%E7%A9%BA%E9%97%B4%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/>高等数学-向量代数与空间解析几何</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%90%91%E9%87%8F%E4%BB%A3%E6%95%B0%E4%B8%8E%E7%A9%BA%E9%97%B4%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95%E4%B9%A0%E9%A2%98/>高等数学-向量代数与空间解析几何习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%80%A7%E8%B4%A8/>高等数学-多元微分学</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6-%E4%BB%A3%E6%95%B0%E5%BA%94%E7%94%A8%E6%9E%81%E5%80%BC%E4%B8%8E%E6%9C%80%E5%80%BC/>高等数学-多元微分学-代数应用：多元函数的极值</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6%E4%B9%A0%E9%A2%98/>高等数学-多元微分学习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E6%9B%B2%E7%BA%BF%E7%A7%AF%E5%88%86%E4%B8%8E%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86/>高等数学-多元微积分-曲线积分与曲面积分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E6%9B%B2%E7%BA%BF%E7%A7%AF%E5%88%86%E4%B8%8E%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86%E4%B9%A0%E9%A2%98/>高等数学-多元微积分-曲线积分与曲面积分习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E6%A6%82%E5%BF%B5%E4%B8%8E%E8%8C%83%E5%9B%B4/>高等数学-多元微积分概述</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E9%87%8D%E7%A7%AF%E5%88%86/>高等数学-多元积分学-重积分</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86-%E5%A4%9A%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6-%E9%87%8D%E7%A7%AF%E5%88%86%E4%B9%A0%E9%A2%98/>高等数学-多元积分学-重积分习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/>高等数学-微分方程</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E4%B9%A0%E9%A2%98/>高等数学-微分方程习题</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E7%BA%A7%E6%95%B0/>高等数学-级数</a></li><li><a href=/post/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6-%E7%BA%A7%E6%95%B0%E4%B9%A0%E9%A2%98/>高等数学-级数习题</a></li></ul></li><li><a href=https://ole12138.github.io//categories/%E7%89%A9%E7%90%86><span class=doc-list-category>物理</span></a><ul><li><a href=/post/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/>数学物理方法总结</a></li></ul></li></ul></div><div class=sidebar-module><h4 class=sidebar-heading>Tags</h4><div class=tag-box><a class=tag-item href=https://ole12138.github.io//tags/np%E5%AE%8C%E5%A4%87%E7%90%86%E8%AE%BA>np完备理论</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6>一元微分学</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B8%80%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86>一元微积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B8%80%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6>一元积分学</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0>三角函数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B8%89%E8%A7%92%E7%BA%A7%E6%95%B0>三角级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86>不定积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%B9%A0%E9%A2%98>习题</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%BA%8C%E6%AC%A1%E5%9E%8B>二次型</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%BA%8C%E6%AC%A1%E5%9E%8B%E5%8C%96%E4%B8%BA%E6%A0%87%E5%87%86%E5%9E%8B>二次型化为标准型</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%BB%A3%E6%95%B0>代数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%BB%A3%E6%95%B0%E5%BA%94%E7%94%A8>代数应用</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E4%BC%BD%E9%A9%AC%E5%87%BD%E6%95%B0>伽马函数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0>傅里叶级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%85%8B%E6%8B%89%E9%BB%98%E6%B3%95%E5%88%99>克拉默法则</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%87%A0%E4%BD%95>几何</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%87%BD%E6%95%B0>函数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA>函数极限理论</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4>函数空间</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%87%BD%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0>函数项级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%88%86%E5%9D%97%E7%9F%A9%E9%98%B5>分块矩阵</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%88%86%E7%B1%BB>分类</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%8D%95%E8%B0%83%E6%80%A7>单调性</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%8F%8D%E5%B8%B8%E7%A7%AF%E5%88%86>反常积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%8F%AF%E5%AF%BC%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86>可导函数的中值定理</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F>向量</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E4%BB%A3%E6%95%B0>向量代数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0>向量值函数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E5%86%85%E7%A7%AF>向量内积</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E5%88%86%E6%9E%90>向量分析</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E7%9A%84%E6%AD%A3%E4%BA%A4%E6%80%A7>向量的正交性</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4>向量空间</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E7%BB%84>向量组</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%A7%A9>向量组的秩</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7>向量组的线性相关性</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%BB%84%E5%90%88>向量组的线性组合</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%90%91%E9%87%8F%E9%95%BF%E5%BA%A6>向量长度</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90>回归分析</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6>基础数学</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%A4%8D%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0>复数项级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E7%9A%84%E6%9E%81%E5%80%BC%E4%B8%8E%E6%9C%80%E5%80%BC>多元函数的极值与最值</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6>多元微分学</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%A4%9A%E5%85%83%E5%BE%AE%E7%A7%AF%E5%88%86>多元微积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%A4%9A%E5%85%83%E7%A7%AF%E5%88%86%E5%AD%A6>多元积分学</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%AE%9A%E7%A7%AF%E5%88%86>定积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E5%BA%94%E7%94%A8>定积分的应用</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%AF%B9%E7%A7%B0%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E5%8C%96>对称矩阵对角化</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%AF%BC%E6%95%B0>导数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%AF%BC%E6%95%B0%E7%9A%84%E5%BA%94%E7%94%A8>导数的应用</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%B8%B8%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0>常数项级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%B9%82%E7%BA%A7%E6%95%B0>幂级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%BC%A7%E5%BE%AE%E5%88%86>弧微分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%BE%AE%E5%88%86>微分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B>微分方程</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%94%AF>数学分支</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90>数学分析</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%95%B4%E6%95%B0%E4%BC%98%E5%8C%96>整数优化</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%96%B9%E9%98%B5%E7%9A%84%E7%89%B9%E5%BE%81%E5%80%BC>方阵的特征值</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%96%B9%E9%98%B5%E7%9A%84%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F>方阵的特征向量</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%96%B9%E9%98%B5%E7%9A%84%E8%A1%8C%E5%88%97%E5%BC%8F>方阵的行列式</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%98%A0%E5%B0%84>映射</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%9B%B2%E7%8E%87>曲率</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%9B%B2%E7%BA%BF%E7%A7%AF%E5%88%86>曲线积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86>曲面积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98>最优化问题</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%9E%81%E5%80%BC>极值</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%9E%81%E9%99%90>极限</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%A0%87%E5%87%86%E5%9E%8B>标准型</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%80%A7%E8%B4%A8>概念与性质</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%A6%82%E7%8E%87%E8%AE%BA>概率论</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%A6%82%E8%BF%B0>概述</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%AD%A3%E5%AE%9A%E7%9F%A9%E9%98%B5>正定矩阵</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E6%B3%8A%E6%9D%BE%E7%A7%AF%E5%88%86>泊松积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%89%A9%E7%90%86>物理</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9B%B8%E4%BC%BC%E5%AF%B9%E8%A7%92%E5%8C%96>相似对角化</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5>相似矩阵</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9F%A9%E9%98%B5>矩阵</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9F%A9%E9%98%B5%E5%90%88%E5%90%8C>矩阵合同</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9F%A9%E9%98%B5%E6%B1%82%E9%80%86>矩阵求逆</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2>矩阵的初等变换</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9>矩阵的秩</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97>矩阵的运算</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%A6%BB%E6%95%A3%E6%9C%80%E4%BC%98%E5%8C%96>离散最优化</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%A9%BA%E9%97%B4%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95>空间解析几何</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%BA%A7%E6%95%B0>级数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0>线性代数</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84>线性方程组</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3>线性方程组的解</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E8%A7%A3%E7%9A%84%E7%BB%93%E6%9E%84>线性方程组解的结构</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E7%BB%84%E5%90%88%E4%BC%98%E5%8C%96>组合优化</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E8%84%89%E7%BB%9C>脉络</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E8%A1%8C%E5%88%97%E5%BC%8F>行列式</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E8%A1%8C%E5%88%97%E5%BC%8F%E5%B1%95%E5%BC%80%E5%85%AC%E5%BC%8F>行列式展开公式</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E8%A1%8C%E5%88%97%E5%BC%8F%E8%A7%A3%E6%96%B9%E7%A8%8B%E7%BB%84%E5%BA%94%E7%94%A8>行列式解方程组应用</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E8%BE%A8%E6%9E%90>辨析</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E8%BF%9E%E7%BB%AD%E6%80%A7>连续性</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%87%8D%E7%A7%AF%E5%88%86>重积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6>随机事件</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87>随机事件的概率</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F>随机变量</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%86%E5%B8%83>随机变量的分布</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%AB%98%E6%96%AF%E7%A7%AF%E5%88%86>高斯积分</a>
+<a class=tag-item href=https://ole12138.github.io//tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6>高等数学</a></div></div></div></div></div><style>code.has-jax{font:inherit;font-size:100%;background:inherit;border:inherit;color:#515151}</style><script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:true,processEnvironments:true},options:{skipHtmlTags:['script','noscript','style','textarea','pre']}};window.addEventListener('load',(event)=>{document.querySelectorAll("mjx-container").forEach(function(x){x.parentElement.classList+='has-jax'})});</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
