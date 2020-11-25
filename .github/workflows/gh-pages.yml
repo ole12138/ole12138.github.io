@@ -17,8 +17,8 @@ jobs:
 
     - name: Setup pandoc
       uses: maxheld83/pandoc@v2
-      #with:
-        #args: "--help"
+      with:
+        args: "--mathjax"
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
