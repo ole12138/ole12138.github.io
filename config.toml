@@ -1,0 +1,70 @@
+baseURL = "https://ole12138.github.io/"
+languageCode = "zh-cn"
+title = "Jingmin's blog"
+theme = "bootie-docs"
+copyright = "© 2020"
+#copyright = "Copyright (c) 2017, Your Name; All rights reserved."
+
+# Enable syntax highlighting.
+#pygmentsstyle = "solarized-dark"
+#pygmentscodefences = true
+#pygmentscodefencesguesssyntax = true
+
+# Your Google analytics code.
+#googleAnalytics = "UA-98254666-1"
+# Your Disqus sortname.
+#disqusShortname = ""
+
+# Number of posts to show in recent posts list (Optional). Defaults to 10.
+paginate = 10
+
+# Number of characters to show in summary.
+summaryLength = 0
+
+# Rss format
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "feed"
+rssLimit = 20
+
+[params]
+  description    = "Brief description for your site."
+  withSitePosts  = true
+  #searchDomain   = "your-domain.org"
+  #noCategoryLink = true
+  repositoryUrl  = "https://github.com/ole12138/ole12138.github.io"
+  highlightStyle = "github"
+  math = true
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  #defaultMarkdownHandler = "pandoc"
+  
+# Main menu which appears below site header.
+#[[menu.main]]
+#name = "Home"
+#url = "/"
+#weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/post"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 999
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 4
+
+
+# Enable tags.
+[taxonomies]
+   tag = "tags"
+   series = "series"
+   category = "categories"
