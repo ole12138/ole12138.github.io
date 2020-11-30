@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>随机事件的概率 on Jingmin's blog</title><link>https://ole12138.github.io/tags/%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87/</link><description>Recent content in 随机事件的概率 on Jingmin's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2020</copyright><lastBuildDate>Wed, 25 Nov 2020 05:24:48 +0800</lastBuildDate><atom:link href="https://ole12138.github.io/tags/%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87/feed.xml" rel="self" type="application/rss+xml"/><item><title>概率论与数理统计-随机事件与概率</title><link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6%E6%80%BB%E7%BB%93/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E4%B8%8E%E6%A6%82%E7%8E%87/</link><pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate><guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6%E6%80%BB%E7%BB%93/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E4%B8%8E%E6%A6%82%E7%8E%87/</guid><description>概率论与数理统计-随机事件与概率 基本概念 现象 现象</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>随机事件的概率 on Jingmin's blog</title><link>/tags/%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87/</link><description>Recent content in 随机事件的概率 on Jingmin's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Copyright (c) 2020, Jingmin; All rights reserved.</copyright><lastBuildDate>Wed, 25 Nov 2020 05:24:48 +0800</lastBuildDate><atom:link href="/tags/%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87/feed.xml" rel="self" type="application/rss+xml"/><item><title>概率论与数理统计-随机事件与概率</title><link>/post/%E6%95%B0%E5%AD%A6%E6%80%BB%E7%BB%93/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E4%B8%8E%E6%A6%82%E7%8E%87/</link><pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate><guid>/post/%E6%95%B0%E5%AD%A6%E6%80%BB%E7%BB%93/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E4%B8%8E%E6%A6%82%E7%8E%87/</guid><description>概率论与数理统计-随机事件与概率 基本概念 现象 现象
+现象是事物表现出来的，能被人感觉到的一切情况。现象是人能够看到、听到、闻到、触摸到的。
+按照是否有自然属性来分，现象可分为自然现象和社会现象。 按照现象的结果是否唯一来分，现象可分为确定性现象和随机现象。
+概率统计研究的主要目标是随机现象，即现象的结果有多种可能，且事先无法准确预测将会发生哪种结果。
+随机试验 对随机现象进行一次观察，称为一次随机试验（试验）
+概率论中将满足下面三个条件的试验称为随机试验，简称试验：
+可在相同的条件下重复进行； 每次试验的结果不止一个 试验之前不能确定哪一个结果会发生，但所有的结果是明确可知的 样本点 随机试验中每一个可能发生的结果（现象观察到的结果），称为一个样本点。一般记作\(\omega\)
+样本空间 随机试验中所有可能发生的结果，即所有的样本点，称为样本空间。一般记作\(\Omega= \{\omega\}\).
+随机事件
+样本空间的任意子集,都称为随机事件（事件）。
+特殊事件(不可能事件与必然事件) 不可能事件：不含样本点的事件（不含任何元素），称为不可能事件。用集合的语言描述为空集\(\varnothing\)
+必然事件：包含样本空间所有样本点的事件（包含所有可能的结果，因此该事件一定会发生），称为必然事件。用集合的语言描述为样本空间全集\(\Omega\)
+事件的发生 若事件A中的某个样本点在随机试验中出现（某个样本点被观测到），称为事件A发生。 即事件A中某个样本点被观测到\(\Leftrightarrow\)事件A发生
+事件的关系与运算 经常要用简单事件表示一些复杂事件（尤其是研究概率的过程中）。 因此需要讨论使事件的关系与运算。
+这里的事件用集合来表示，所以实际上是集合的关系与运算。
+包含关系\(A \subset B\) 定义:A发生导致B发生,称:B包含A,或称A被B包含.记\(A \subset B\).集合论：A的元素必属于B。图示：
+B包含A （定义，称，记，集合论，图）
+相等关系A=B \(B \subset A, B \subset A\)，则A=B
+互斥关系\(A B=\varnothing\) 在试验中，事件A与B不能同时发生，即\(A B=\varnothing\)，则称A，B互为互斥事件
+设\(A_1, A_2, \cdots, A_n\)是一组事件， 若它们两两互斥(都是互斥事件)， 且它们的并等于样本空间（\(\cup_{i=1}^{n} A_i = \Omega\)）， 称这组事件构成一个互不相容的完备事件组（完备事件组）
+对立关系 每次事件中，“事件A不发生”的事件称为事件A的对立事件或者逆事件。记为\(\bar{A}\)。
+性质： \((1) A+A=\Omega\) \((2) A \bar{A}=\varnothing\)</description></item></channel></rss>

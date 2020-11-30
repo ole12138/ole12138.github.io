@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>最优化问题 on Jingmin's blog</title><link>https://ole12138.github.io/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/</link><description>Recent content in 最优化问题 on Jingmin's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2020</copyright><lastBuildDate>Wed, 25 Nov 2020 05:24:48 +0800</lastBuildDate><atom:link href="https://ole12138.github.io/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/feed.xml" rel="self" type="application/rss+xml"/><item><title>最优化问题总结</title><link>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6%E6%80%BB%E7%BB%93/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</link><pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate><guid>https://ole12138.github.io/post/%E6%95%B0%E5%AD%A6%E6%80%BB%E7%BB%93/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid><description>最优化问题总结 最优化问题概述 参考：https://zhuanlan.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>最优化问题 on Jingmin's blog</title><link>/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/</link><description>Recent content in 最优化问题 on Jingmin's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Copyright (c) 2020, Jingmin; All rights reserved.</copyright><lastBuildDate>Wed, 25 Nov 2020 05:24:48 +0800</lastBuildDate><atom:link href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/feed.xml" rel="self" type="application/rss+xml"/><item><title>最优化问题总结</title><link>/post/%E6%95%B0%E5%AD%A6%E6%80%BB%E7%BB%93/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</link><pubDate>Wed, 25 Nov 2020 05:24:48 +0800</pubDate><guid>/post/%E6%95%B0%E5%AD%A6%E6%80%BB%E7%BB%93/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid><description>最优化问题总结 最优化问题概述 参考：https://zhuanlan.zhihu.com/p/22801652
+最优化问题的引出 以下都是最优化问题的例子： 上班怎么选择乘车路线，才能舒服又快速的到达公司；旅游如何选择航班和宾馆，既省钱又能玩的开心； 跳槽应该选择哪家公司，钱多、事少、离家近，前台妹子颜值高；买房子应该选在哪里，交通发达有学区，生活便利升值快。
+可以看出，上面所有的问题都面临无数的选择， 我们会根据自己的偏好对每个选择打一个不同的分数，再从所有的选择中找出最优的一个。这个寻求最优解的过程其实就是最优化问题。
+我们要打的分数就称为目标函数。
+最优化问题往往还要面临一定的约束条件，比如对旅行路线的选择，总花费和出发、到达时间就构成了约束条件，对买房子的选择，离公司的路程、总价也可能构成约束条件。我们选择的最优解也必须满足这些约束条件。
+最优化问题的定义 最优化问题就可以定义为： 在给定的约束条件下， 选择最优的参数和方案，来使得目标函数最大化/最小化的问题。
+最优化问题的数学形式是：
+img 这里可以看到最优化问题的三个基本要素：
+目标函数: 用来衡量结果的好坏 参数值：未知的因子，需要通过数据来确定。 约束条件：需要满足的限制条件 最优化问题的分类 按约束条件分类 根据约束条件的种类，最优化问题可以分成以下种类：
+img 按目标函数分类 而根据目标函数的状态， 最优化问题又可以分成：
+img 按解法分类（解法的选择） 在实际的工作中，我们如何来选择最优化问题的解法呢？
+基本的依据有以下几点：
+目标函数是否连续可导 目标函数的形式，是否为线性函数或者二次函数 img 对应上图：
+离散最优化方法： 主要用于求解目标函数不连续或者不可导的情况，典型的解法有爬山法、模拟退火、遗传算法和蚁群算法等。 线性规划和二次规划：运筹学的重要研究内容，适用于目标函数是线性或二次函数的形式。 连续最优化方法： 适用于逻辑回归、SVM、神经网络等机器学习问题，主要方法包括梯度下降、牛顿法和拟牛顿法。 离散最优化 参考：百度百科：整数规划 参考：知乎：运筹学发展概况（上） 参考：知乎：运筹学发展概况（中）
+最优化问题似乎自然地分成两类：一类是连续变量的问题，另一类是离散变量的问题。具有离散变量的问题，我们称它为组合的(和离散最优化、整数规划常常混用，实际上范围稍稍有点不同）。在连续变量的问题里，一般地是求一组实数，或者一个函数；在组合问题里，是从一个无限集或者可数无限集里寻找一个对象——典型地是一个整数，一个集合，一个排列，或者一个图。一般地，这两类问题有相当不同的特色，并且求解它们的方法也是很不同的。
+整数优化 数规划是指规划中的变量（全部或部分）限制为整数
+包括组合优化、0-1优化。。。
+而组合最优化通常都可表述为整数规划问题。
+组合优化 参考：组合优化百度百科 参考：知乎：离散/整数/组合/非凸优化概述及其在AI的应用
+组合优化是20 世纪60 年代逐渐发展起来的一个交叉学科分支，它的研究对象是有限集合上的极值问题。</description></item></channel></rss>
