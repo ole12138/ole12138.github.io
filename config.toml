@@ -1,4 +1,4 @@
-baseURL = "https://ole12138.github.io/"
+#baseURL = "https://ole12138.github.io/"
 languageCode = "zh-cn"
 title = "Jingmin's blog"
 theme = "bootie-docs"
@@ -19,7 +19,7 @@ baseName = "feed"
 rssLimit = 20
 
 [params]
-  description    = "抓住所知的一鳞半爪"
+  description    = "喜欢，并为此欢喜"
   withSitePosts  = true
   #searchDomain   = "https://ole12138.github.io"
   noCategoryLink = true
