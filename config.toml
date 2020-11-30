@@ -2,24 +2,14 @@ baseURL = "https://ole12138.github.io/"
 languageCode = "zh-cn"
 title = "Jingmin's blog"
 theme = "bootie-docs"
-copyright = "© 2020"
-#copyright = "Copyright (c) 2017, Your Name; All rights reserved."
-
-# Enable syntax highlighting.
-#pygmentsstyle = "solarized-dark"
-#pygmentscodefences = true
-#pygmentscodefencesguesssyntax = true
+#copyright = "test© 2020"
+copyright = "Copyright (c) 2020, Jingmin; All rights reserved."
 
 # Your Google analytics code.
 #googleAnalytics = "UA-98254666-1"
-# Your Disqus sortname.
-#disqusShortname = ""
 
 # Number of posts to show in recent posts list (Optional). Defaults to 10.
 paginate = 10
-
-# Number of characters to show in summary.
-summaryLength = 0
 
 # Rss format
 [outputFormats]
@@ -29,10 +19,10 @@ baseName = "feed"
 rssLimit = 20
 
 [params]
-  description    = "Brief description for your site."
+  description    = "抓住所知的一鳞半爪"
   withSitePosts  = true
-  #searchDomain   = "your-domain.org"
-  #noCategoryLink = true
+  #searchDomain   = "https://ole12138.github.io"
+  noCategoryLink = true
   repositoryUrl  = "https://github.com/ole12138/ole12138.github.io"
   highlightStyle = "github"
   math = true
@@ -53,14 +43,24 @@ url = "/post"
 weight = 2
 
 [[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 3
+
+[[menu.main]]
+name = "Series"
+url = "/series"
+weight = 4
+
+[[menu.main]]
+name = "Categories"
+url = "/categories"
+weight = 5
+
+[[menu.main]]
 name = "About"
 url = "/about"
 weight = 999
-
-[[menu.main]]
-name = "Tags"
-url = "/tags"
-weight = 4
 
 
 # Enable tags.
