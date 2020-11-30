@@ -25,7 +25,7 @@ rssLimit = 20
   noCategoryLink = true
   repositoryUrl  = "https://github.com/ole12138/ole12138.github.io"
   highlightStyle = "github"
-  math = true
+  math = false
 
 [markup]
   defaultMarkdownHandler = "goldmark"
