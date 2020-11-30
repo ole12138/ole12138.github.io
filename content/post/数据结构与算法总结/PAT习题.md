@@ -1,3 +1,19 @@
+---
+title: "PAT甲级习题"
+date: 2020-06-25T05:24:48+08:00
+draft: false
+categories: ["数据结构与算法"]
+tags: 
+- PAT
+- 栈
+- 树
+- 最短路径
+- 排序
+- 动态规划
+markup: pandoc
+math: false
+---
+
 # PAT甲级习题
 
 ## 栈的模拟

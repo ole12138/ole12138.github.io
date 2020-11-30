@@ -5,6 +5,7 @@ draft: false
 categories: ["数学"]
 tags: ["概率论", "回归分析"] 
 markup: pandoc
+math: true
 ---
 
 # 回归分析总结
