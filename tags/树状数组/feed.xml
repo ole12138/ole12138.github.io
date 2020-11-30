@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>树状数组 on Jingmin's blog</title><link>https://ole12138.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</link><description>Recent content in 树状数组 on Jingmin's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Copyright (c) 2020, Jingmin; All rights reserved.</copyright><lastBuildDate>Thu, 25 Jun 2020 05:24:48 +0800</lastBuildDate><atom:link href="https://ole12138.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/feed.xml" rel="self" type="application/rss+xml"/><item><title>数据结构总结</title><link>https://ole12138.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%80%BB%E7%BB%93/</link><pubDate>Thu, 25 Jun 2020 05:24:48 +0800</pubDate><guid>https://ole12138.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%80%BB%E7%BB%93/</guid><description>树 二叉树 二叉树搜索树 平衡二叉搜索树（AVL树） 参考：https://zhuanlan.zhihu.com/p/34899732 参考：https://oi-wiki.org/ds/avl/ 参考：https://www.jianshu.com/p/65c90aa1236d 参考：https://blog.csdn.net/wanderlustLee/article/details/81297253
+AVL树是，在二叉搜索树的前提下，能保证平衡的树。
+AVL树特点 二叉搜索树的特点：对树上的任意节点，其左子树上的值都小于当前节点的值，其右子树上的值都大约当前节点的值 平衡：对树上的任意节点，其左子树高度与右子树高度相差不超过1.（高度差可为-1，0，1） AVL树的基本操作/功能 二叉搜索树的操作：插入/删除/搜索，可能还包括找上一个/下一个节点 维持树的平衡 维持树的平衡 平衡条件是什么？ 对树上的任意节点，其左子树高度与右子树高度相差不超过1.（高度差可为-1，0，1）
+什么原因会失去平衡，哪些节点会失去平衡？ 假设当前的树已经平衡。当AVL树进行插入/删除操作时，可能造成某些节点左右子树高度的变动，破坏树的平衡。 具体的说，插入/删除位置的祖先节点可能会失去平衡。所以插入删除完成后，需要逆着查找路径，依次维护祖先节点的平衡性。
+如何使失去平衡的某个节点恢复平衡？ 我们要做的操作是，调整该节点处的左右子树高度，使其重新平衡。形象的描述就是要进行旋转操作，使其重新平衡。
+左旋操作、右旋操作示意图：
+img 实际上，一次旋转操作并不能保证使失去平衡的树恢复平衡。
+不平衡情况 前面说了插入/删除节点可能导致祖先节点失去平衡。以插入节点为例（删除类似），祖先节点具体会有4种不平衡情况：LL、RR、LR、RL。下面具体说明。
+在左孩子的左子树插入节点导致不平衡LL 批注 2020-06-11 144254 这种情况只需在失去平衡的节点Y处，进行一次左旋操作即可。
+在右孩子的右子树插入节点导致不平衡RR 批注 2020-06-11 144827 这种情况只需在失去平衡的节点X处，进行一次右旋操作即可。
+在左孩子的右子树插入节点导致不平衡LR 批注 2020-06-11 145834 这种情况需在失去平衡的节点的左子节点X处，先进行一次左旋操作，再在当前节点Y进行一次右旋操作即可。
+在右孩子的左子树插入节点导致不平衡RL 批注 2020-06-11 150123 这种情况需在失去平衡的节点的右子节点处，先进行一次右旋操作，再在当前节点进行一次左旋操作即可。
+java实现：（插入/删除和中序遍历） packagecom.jingmin.datastructure; importjava.util.Scanner; importjava.util.Stack; /** * @author : wangjm * @date : 2020/6/11 16:38 * AVL树(插入/删除操作和中序遍历） * &amp;lt;p&amp;gt; * 参考（过程和逻辑）：https://zhuanlan.</description></item></channel></rss>

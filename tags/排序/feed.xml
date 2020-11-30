@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>排序 on Jingmin's blog</title><link>https://ole12138.github.io/tags/%E6%8E%92%E5%BA%8F/</link><description>Recent content in 排序 on Jingmin's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Copyright (c) 2020, Jingmin; All rights reserved.</copyright><lastBuildDate>Thu, 25 Jun 2020 05:24:48 +0800</lastBuildDate><atom:link href="https://ole12138.github.io/tags/%E6%8E%92%E5%BA%8F/feed.xml" rel="self" type="application/rss+xml"/><item><title>PAT甲级习题</title><link>https://ole12138.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/pat%E4%B9%A0%E9%A2%98/</link><pubDate>Thu, 25 Jun 2020 05:24:48 +0800</pubDate><guid>https://ole12138.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/pat%E4%B9%A0%E9%A2%98/</guid><description>PAT甲级习题 栈的模拟 例1 已知入栈顺序1-N，并给定栈最大容积M。判断出栈顺序是否正确, 以及是否爆栈
+题目链接
+方法：栈的模拟
+由于入栈是固定从1到N的，那么某元素出栈前，比它小的数都应当已经入栈。利用这个过程来确定出入栈顺序。
+packagecom.jingmin.advanced2; importjava.io.BufferedReader; importjava.io.IOException; importjava.io.InputStreamReader; importjava.util.Stack; /** * @author : wangjm * @date : 2020/6/26 09:55 * @discription : https://www.nowcoder.com/pat/5/problem/4090 * 已知入栈顺序，判断出栈顺序是否正确, 以及是否爆栈: 栈的模拟 * 由于入栈是固定从1到N的，那么某元素出栈前，比它小的数都应当已经入栈 */ public class Advanced1040 { public static void main(String[] args) throws IOException { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); String[] s = br.readLine().split(&amp;quot; &amp;quot;); int m = Integer.</description></item><item><title>算法总结</title><link>https://ole12138.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</link><pubDate>Thu, 25 Jun 2020 05:24:48 +0800</pubDate><guid>https://ole12138.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</guid><description>算法总结 算法思想 参考：常用算法指南(一)基本算法思想
+参考：八大算法思想
+参考：12种常见算法思想汇总
+递归、循环、迭代、遍历的区别 程序的运行快慢一般与其中重复执行的代码息息相关，而“重复执行”的方式又分为以下4种：
+递归：一个函数反复调用自身的行为，特指函数本身； 循环：满足一定条件下，重复执行某些行为，如while结构； 迭代：按某种规则执行一个序列中的每一项，每次执行的结果又作为下次执行的初始值，直到满足某个精度或条件； 递推：由前一项可以推出后一项，是从前面的已知结果推出未知结果。当前一项的结果作为后一项的初始值时，就成了迭代。（有时候和迭代混用） 遍历：按某种规则访问图形结构中每一个节点，特指图形结构。 说明例子：
+【递归】
+你自己不太了解小孩子的需求，为了缩小范围，让你的儿子去给孙子挑选。儿子比你强点有限，但依然不太了解小孩子的需求。为了缩小范围，你又让你孙子去挑选。如此这般，直到找到合适的玩具。
+【循环】
+你去小卖铺买了一个玩具，拿回家后孩子不喜欢，你也没问他为什么不喜欢。然后你又去同一个小卖铺买了一个玩具，拿回家后孩子又不喜欢。。。如此往复 10 次，孩子才满意。
+每次去买玩具的目标、行为都一样，这叫循环。
+【迭代】
+你去小卖铺买了个一个玩具，拿回家后孩子不喜欢。你耐心的询问后得知他喜欢乐高的玩具，于是你就去大超市给他买了乐高，回家后孩子还是不喜欢，耐心询问后得知他喜欢乐高玩具中最贵的那个玩具，于是你就去奢侈品商店给他买了乐高限量版玩具，拿回家后孩子很满意。
+每次去买玩具都跟上一次不一样，或是有了新的目标，或是缩小了搜寻范围，这叫迭代。
+来源：CyrusCao_知乎_https://www.zhihu.com/question/20278387/answer/109266159
+递归、迭代、循环常常可以转换，且转换后程序的效率不一定相同。递归由于效率低的问题，经常要求转换成循环结构的非递归形式。
+递归、分治策略、动态规划以及贪心算法之间的关系
+常规的循环、迭代、递归 最大公因数 辗转相减法是一种简便的求出两数最大公约数的方法。由其可推出辗转相除法。
+辗转相除法求两正整数的迭代次数较少。
+辗转相除,使余数消失的那个除数就是最大公因数
+递归法 //gcb(m,n): m&amp;gt;n, r 是 m ÷ n 的余数， //若r不为0， 则gcd(m,n) = gcd(n,r); //若r为0，则n是最大公因数 int divisor(int m,int n) { if (m % n == 0) { return n; } else { return divisor(n,m % n); } } 迭代法 public static int gcd(int a,int b){ //如果相等 if(a==b){ return a; } //保证大数除以小数 int l,x=a,y=b; if(a&amp;gt;b){ x=b; y=a; } //迭代出现余数为0 while((l=(y%x))!</description></item></channel></rss>
