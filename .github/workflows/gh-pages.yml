@@ -42,7 +42,7 @@ jobs:
         destination-repo: git@gitee.com:ole12138/ole12138.git
 
     - name: Build for Github
-      run: hugo --config gitee-config.toml,config.toml --minify
+      run: hugo --config github-config.toml,config.toml --minify
     
     - name: Deploy to Github
       uses: peaceiris/actions-gh-pages@v3
