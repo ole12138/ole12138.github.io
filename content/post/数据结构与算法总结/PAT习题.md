@@ -10,7 +10,7 @@ tags:
 - 最短路径
 - 排序
 - 动态规划
-markup: pandoc
+#markup: pandoc
 math: false
 ---
 

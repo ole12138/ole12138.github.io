@@ -30,6 +30,10 @@ rssLimit = 20
 [markup]
   defaultMarkdownHandler = "goldmark"
   #defaultMarkdownHandler = "pandoc"
+  [markup.tableOfContents]
+    endLevel = 6
+    ordered = false
+    startLevel = 1
   
 # Main menu which appears below site header.
 #[[menu.main]]
