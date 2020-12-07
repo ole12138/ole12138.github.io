@@ -31,9 +31,11 @@ rssLimit = 20
   defaultMarkdownHandler = "goldmark"
   #defaultMarkdownHandler = "pandoc"
   [markup.tableOfContents]
-    endLevel = 6
+    endLevel = 4
     ordered = false
     startLevel = 1
+  [markup.goldmark.renderer]
+      unsafe = true
   
 # Main menu which appears below site header.
 #[[menu.main]]
