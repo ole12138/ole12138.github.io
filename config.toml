@@ -2,8 +2,10 @@
 languageCode = "zh-cn"
 title = "Jingmin's blog"
 theme = "bootie-docs"
-#copyright = "test© 2020"
 copyright = "Copyright (c) 2020, Jingmin; All rights reserved."
+
+# Preserve special characters in taxonomy names ("Gérard Depardieu" vs "Gerard Depardieu")
+preserveTaxonomyNames = true
 
 # Your Google analytics code.
 #googleAnalytics = "UA-98254666-1"
