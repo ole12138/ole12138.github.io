@@ -147,7 +147,8 @@ public class JdkDynamicProxy {
 }
 ```
 
-以上InvocationHandler实例是lambda表达式的写法，还可以用匿名类的方式实现
+以上InvocationHandler实例是lambda表达式的写法，还可以用匿名类的方式实现.
+(实际上，InvocationHandler中并没有@FunctionalInterface注解，之后仍有向其中添加其他抽象方法的可能，届时，lambda表示式的写法将出现编译错误)
 
 测试
 

@@ -1,11 +1,12 @@
 ---
-title: "转载：发起HTTP请求：Spring中RestTempalate使用并添加headers"
+title: "转载：发起HTTP请求：Spring中RestTemplate设置与携带请求头"
 date: 2021-01-08T16:56:48+08:00
 draft: false
 categories: 
 - Java
 - HTTP
 series:
+- RestTemplate
 - Java发起HTTP请求
 tags:
 - Java
@@ -14,11 +15,11 @@ tags:
 - RestTemplate
 ---
 
+# Rest设置请求头以及进一步配置
 
+本章节“Rest设置与携带请求头”部分非原创，转载来源：https://juejin.cn/post/6844904202397827086
 
-博文非原创，转载来源：https://juejin.cn/post/6844904202397827086
-
-原作者的[上一篇](https://juejin.cn/post/6844903656165212174)介绍了 RestTemplate 的基本使用姿势，在文末提出了一些扩展的高级使用姿势，本篇将主要集中在如何携带自定义的请求头，如设置 User-Agent，携带 Cookie
+本节主要集中在如何携带自定义的请求头，如设置 User-Agent，携带 Cookie
 
 - Get 携带请求头
 - Post 携带请求头
@@ -218,69 +219,14 @@ headers: {"cookie":"my_user_id=haha123; UN=1231923;gr_user_id=interceptor;","hos
 cookies: {"my_user_id":"haha123","UN":"1231923","gr_user_id":"interceptor"}
 ```
 
-### 4. 请求头错误使用姿势
+注意：在我们使用自定义请求头时，有一个需要特殊重视的地方，HttpHeaders 使用不当，可能导致请求头爆炸。比如，若希望复用 HttpHeaders，但是不小心使用了`headers.add` 方式添加请求头,而不是前面的 `set`方式，则在每一次请求过后，请求头膨胀了一次。
 
-在我们使用自定义请求头时，有一个需要特殊重视的地方，HttpHeaders 使用不当，可能导致请求头爆炸
+# RestTemplate的进一步阅读
 
-```java
-/**
- * 错误的请求头使用姿势
- */
-public void errorHeader() {
-    RestTemplate restTemplate = new RestTemplate();
+[RestTemplate使用教程](https://www.cnblogs.com/f-anything/p/10084215.html)
 
-    int i = 0;
-    // 为了复用headers，避免每次都创建这个对象，但是在循环中又是通过 add 方式添加请求头，那么请求头会越来越膨胀，最终导致请求超限
-    // 这种case，要么将add改为set；要么不要在循环中这么干
-    HttpHeaders headers = new HttpHeaders();
-    while (++i < 5) {
-        headers.add("user-agent",
-                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36");
-        headers.add("cookie", "my_user_id=haha123; UN=1231923;gr_user_id=welcome_yhh;");
+[The Guide to RestTemplate](https://www.baeldung.com/rest-template)
 
-        HttpEntity<String> res = restTemplate.exchange("http://127.0.0.1:8080/get?name=一灰灰&age=20", HttpMethod.GET,
-                new HttpEntity<>(null, headers), String.class);
-        log.info("get with selfDefine header: {}", res);
-    }
-}
-```
+比较全面的一篇博文：[SpringBoot系列 - 使用RestTemplate](https://www.xncoding.com/2017/07/06/spring/sb-restclient.html)
 
-上面演示的关键点为
-
-- 希望复用 HttpHeaders
-- `headers.add` 方式添加请求头；而不是前面的 `set`方式
-
-输出如下，请注意每一次请求过后，请求头膨胀了一次
-
-```
-(get with selfDefine header: <200,params: {"name":["一灰灰"],"age":["20"]}
-headers: {"cookie":"my_user_id=haha123; UN=1231923;gr_user_id=welcome_yhh;","host":"127.0.0.1:8080","connection":"keep-alive","accept":"text/plain, application/json, application/*+json, */*","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
-cookies: {"my_user_id":"haha123","UN":"1231923","gr_user_id":"welcome_yhh"},[Content-Type:"text/plain;charset=UTF-8", Content-Length:"447", Date:"Mon, 29 Jun 2020 07:48:49 GMT"]>
-
-(get with selfDefine header: <200,params: {"name":["一灰灰"],"age":["20"]}
-headers: {"cookie":"my_user_id=haha123; UN=1231923;gr_user_id=welcome_yhh;; my_user_id=haha123; UN=1231923;gr_user_id=welcome_yhh;","host":"127.0.0.1:8080","connection":"keep-alive","accept":"text/plain, application/json, application/*+json, */*","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
-cookies: {"my_user_id":"haha123","UN":"1231923","gr_user_id":"welcome_yhh"},[Content-Type:"text/plain;charset=UTF-8", Content-Length:"503", Date:"Mon, 29 Jun 2020 07:48:49 GMT"]>
-
-(get with selfDefine header: <200,params: {"name":["一灰灰"],"age":["20"]}
-headers: {"cookie":"my_user_id=haha123; UN=1231923;gr_user_id=welcome_yhh;; my_user_id=haha123; UN=1231923;gr_user_id=welcome_yhh;; my_user_id=haha123; UN=1231923;gr_user_id=welcome_yhh;","host":"127.0.0.1:8080","connection":"keep-alive","accept":"text/plain, application/json, application/*+json, */*","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
-cookies: {"my_user_id":"haha123","UN":"1231923","gr_user_id":"welcome_yhh"},[Content-Type:"text/plain;charset=UTF-8", Content-Length:"559", Date:"Mon, 29 Jun 2020 07:48:49 GMT"]>
-
-(get with selfDefine header: <200,params: {"name":["一灰灰"],"age":["20"]}
-headers: {"cookie":"my_user_id=haha123; UN=1231923;gr_user_id=welcome_yhh;; my_user_id=haha123; UN=1231923;gr_user_id=welcome_yhh;; my_user_id=haha123; UN=1231923;gr_user_id=welcome_yhh;; my_user_id=haha123; UN=1231923;gr_user_id=welcome_yhh;","host":"127.0.0.1:8080","connection":"keep-alive","accept":"text/plain, application/json, application/*+json, */*","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
-cookies: {"my_user_id":"haha123","UN":"1231923","gr_user_id":"welcome_yhh"},[Content-Type:"text/plain;charset=UTF-8", Content-Length:"615", Date:"Mon, 29 Jun 2020 07:48:49 GMT"]>
-```
-
-
-
-## II. 其他
-
-### 0. 项目&系列博文
-
-**系列博文**
-
-- [【WEB 系列】RestTemplate 基础用法小结](http://spring.hhui.top/spring-blog/2020/06/17/200617-SpringBoot系列RestTemplate基础用法小结/)
-
-**源码**
-
-- 工程：[github.com/liuyueyi/sp…](https://github.com/liuyueyi/spring-boot-demo)
-- 项目: [github.com/liuyueyi/sp…](https://github.com/liuyueyi/spring-boot-demo/tree/master/spring-boot/221-web-resttemplate)
+[RestTemplate的API文档](https://docs.spring.io/spring-framework/docs/current/javadoc-api/index.html?org/springframework/web/client/RestTemplate.html)

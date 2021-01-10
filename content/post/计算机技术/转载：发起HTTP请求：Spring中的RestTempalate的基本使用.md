@@ -7,6 +7,7 @@ categories:
 - HTTP
 series:
 - Java发起HTTP请求
+- RestTemplate
 tags:
 - Java
 - HTTP
@@ -14,11 +15,34 @@ tags:
 - RestTemplate
 ---
 
-博文非原创，转载来源：https://juejin.cn/post/6844903656165212174
+# RestTemplate的认识与基本使用
 
-## I. RestTempalate 基本使用
+## RestTemplate介绍
 
 在Spring的生态下，则可以利用`RestTemplate`来发起Http请求。
+
+spring框架提供的RestTemplate类可用于在应用中调用rest服务，它简化了与http服务的通信方式，统一了RESTful的标准，封装了http链接， 我们只需要传入url及返回值类型即可。相较于之前常用的HttpClient，RestTemplate是一种更优雅的调用RESTful服务的方式。
+
+RestTemplate默认依赖JDK提供http连接的能力（HttpURLConnection），如果有需要的话也可以通过setRequestFactory方法替换为例如 Apache HttpComponents、Netty或OkHttp等其它HTTP library。
+
+
+
+RestTemplate构成与实现逻辑：
+
+RestTemplate包含以下几个部分：
+
+- HttpMessageConverter 对象转换器
+- ClientHttpRequestFactory 默认是JDK的HttpURLConnection
+- ResponseErrorHandler 异常处理
+- ClientHttpRequestInterceptor 请求拦截器
+
+用一张图可以很直观的理解：
+
+![img](https://picgo12138.oss-cn-hangzhou.aliyuncs.com/md/rest01.png)
+
+## RestTempalate的基本使用
+
+本节"RestTempalate的基本使用"非原创，转载来源：https://juejin.cn/post/6844903656165212174
 
 ### 0. 目标
 
@@ -36,7 +60,10 @@ tags:
 - 上传文件可以支持么
 - 对于需要代理才能访问的http资源，加代理的姿势是怎样的
 
-上面的问题比较多，目测不是一篇博文可以弄完的，因此对这个拆解一下，本篇主要关注在RestTemplate的简单Get/Post请求的使用方式上
+上面的问题比较多，目测不是一篇博文可以弄完的，因此对这个拆解一下，本节主要关注在RestTemplate的简单Get/Post请求的使用方式上：
+
+- 普通的Get请求获取返回数据，怎么玩？
+- post提交表达的请求，如何处理
 
 ### 1. 基本接口
 
@@ -400,63 +427,5 @@ public String post(HttpServletRequest request, @RequestParam(value = "email", re
     return "redirect:/success?email=" + email + "&nick=" + URLEncoder.encode(nick, "UTF-8") + "&status=success";
 }
 ```
-
-## II. 小结
-
-上面目前只给出了Get/Post两种请求方式的基本使用方式，并没有涉及到更高级的如添加请求头，添加证书，设置代理等，高级的使用篇等待下一篇出炉，下面小结一下上面的使用姿势
-
-### 1. Get请求
-
-get请求中，参数一般都是带在url上，对于参数的填充，有两种方式，思路一致都是根据实际的参数来填充url中的占位符的内容；根据返回结果，也有两种方式，一个是只关心返回对象，另一个则包含了返回headers信心
-
-**参数填充**
-
-1. 形如  `http://story.hhui.top?id={0}` 的 url
-
-- 调用 `getForObject(String url, Class<T> responseType, Object... uriVariables)`
-- 模板中的0，表示 uriVariables 数组中的第0个， i，则表示第i个
-- 如果没有url参数，也推荐用这个方法，不传uriVariables即可
-
-1. 形如  `http://story.hhui.top?id={id}` 的 url
-
-- 调用 `getForObject(String url, Class<T> responseType, Map<String, ?> uriVariables)`
-- map参数中的key，就是url参数中 {} 中的内容
-
-其实还有一种传参方式，就是path参数，填充方式和上面一样，并没有什么特殊的玩法，上面没有特别列出
-
-**返回结果**
-
-1. 直接获取返回的数据  `getForObject`
-2. 获取待responseHeader的数据 `getForEntity`
-
-### 2. Post请求
-
-- post请求的返回也有两种，和上面一样
-- post请求，参数可以区分为表单提交和url参数，其中url参数和前面的逻辑一致
-- post表单参数，请包装在 `MultiValueMap` 中，作为第二个参数 `Request` 来提交
-- post的方法，还有一个 `postForLocation`，返回的是一个URI对象，即适用于返回网络资源的请求方式
-
-### 3. ErrorHandle
-
-[SpringWeb 系列教程 RestTemplate 4xx/5xx 异常信息捕获](#https://juejin.cn/post/6844904045576994823)
-
-### 4. 其他
-
-最前面提了多点关于网络请求的常见case，但是上面的介绍，明显只处于基础篇，我们还需要关注的有
-
-- 如何设置请求头？
-- 有身份验证的请求，如何携带身份信息？
-- 代理的设置
-- 文件上传可以怎么做？
-- post提交json串（即RequestBody) 又可以怎么处理
-
-上面可能还停留在应用篇，对于源码和实现有兴趣的话，问题也就来了
-
-- RestTemplaet的实现原理是怎样的
-- 前面url参数的填充逻辑实现是否优雅
-- 返回的对象如何解析
-- ....
-
-小小的一个工具类，其实东西还挺多的，接下来的小目标，就是针对上面提出的点，逐一进行研究
 
 。

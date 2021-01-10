@@ -372,3 +372,9 @@ assertEquals(sortedList, Lists.newArrayList(1, 3, 5, 8, 10));
 > 2. [OpenJDK](http://openjdk.java.net/)
 > 3. [函数式编程初探](http://www.ruanyifeng.com/blog/2012/04/functional_programming.html) by 阮一峰
 > 4. [函数式编程是一个倒退](http://kb.cnblogs.com/page/154935/)
+
+## 进一步阅读
+
+[Java如何支持函数式编程](#https://developer.aliyun.com/article/772929)
+
+[Java之——Java8 自定义函数编程](https://blog.csdn.net/l1028386804/article/details/80390682)
