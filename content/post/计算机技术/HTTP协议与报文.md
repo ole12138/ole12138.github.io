@@ -320,6 +320,8 @@ HTTP/2 允许服务器未经请求，主动向客户端发送资源，这叫做�
 
 # 进一步阅读
 
+[HTTP - Hypertext Transfer Protocol](https://www.w3.org/Protocols/)
+
 [HTTP简介（报文格式、cookie、keep-alive、HTTP请求的一个完整过程）](https://blog.csdn.net/jy02268879/article/details/106651494)
 
 [Http vs Http2 详细细节](https://segmentfault.com/a/1190000023517089)

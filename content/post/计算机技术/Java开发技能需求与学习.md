@@ -62,7 +62,7 @@ Maven的pom的标签								:done, mavanPom, 2021-01-05, 2021-01-06
 section Java
 Java函数式编程与lambda表达式							:done, javaLambda, 2021-01-07, 2021-01-08
 Java代理模式										:done, javaProxy, 2021-01-09, 1d
-java发起Http请求-HttpClient							:crit,httpClient,after restTemplate,1d
+java发起Http请求-apache的HttpClient							:crit,httpClient,after restTemplate,1d
 java发起Http请求-HttpUrlConnection					:done,2021-01-10,1d
 java发起Http请求-OkHttp								:active,1d
 ```
