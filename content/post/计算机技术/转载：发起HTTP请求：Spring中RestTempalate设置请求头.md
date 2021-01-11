@@ -1,5 +1,5 @@
 ---
-title: "转载：发起HTTP请求：Spring中RestTemplate设置与携带请求头"
+title: "发起HTTP请求：Spring中RestTemplate设置与携带请求头（转载）"
 date: 2021-01-08T16:56:48+08:00
 draft: false
 categories: 

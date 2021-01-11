@@ -1,5 +1,5 @@
 ---
-title: "转载：Java8函数式编程入门"
+title: "Java8函数式编程入门（转载）"
 date: 2021-01-07T10:40:48+08:00
 draft: false
 categories: 

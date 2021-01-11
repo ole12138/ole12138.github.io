@@ -1,5 +1,5 @@
 ---
-title: "Java发起HTTP请求：使用Apache的HttpClient"
+title: "发起HTTP请求：使用Apache的HttpClient"
 date: 2021-01-11T14:34:53+08:00
 draft: false
 categories: 
@@ -32,8 +32,7 @@ tags:
 </dependency>
 ```
 
-简单使用：
-[参考](https://zhuanlan.zhihu.com/p/69285935)：
+[参考](https://zhuanlan.zhihu.com/p/69285935)了别人的代码,简单使用：
 
 ```java
 public class HttpClientUtil {

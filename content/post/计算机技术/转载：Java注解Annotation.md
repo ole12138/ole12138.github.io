@@ -1,5 +1,5 @@
 ---
-title: "转载：Java Annotation认知"
+title: "Java Annotation认知（转载）"
 date: 2021-01-05T12:00:39+08:00
 draft: false
 categories: 

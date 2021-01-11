@@ -1,5 +1,5 @@
 ---
-title: "转载：Maven pom.xml中的元素modules、parent、properties以及import"
+title: "Maven pom.xml中的元素modules、parent、properties以及import（转载）"
 date: 2021-01-06T10:00:39+08:00
 draft: false
 categories: 
