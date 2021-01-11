@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JDK版本的切换 on Jingmin's blog</title><link>https://ole12138.gitee.io/tags/jdk%E7%89%88%E6%9C%AC%E7%9A%84%E5%88%87%E6%8D%A2/</link><description>Recent content in JDK版本的切换 on Jingmin's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Copyright (c) 2020, Jingmin; All rights reserved.</copyright><lastBuildDate>Mon, 11 Jan 2021 18:11:08 +0800</lastBuildDate><atom:link href="https://ole12138.gitee.io/tags/jdk%E7%89%88%E6%9C%AC%E7%9A%84%E5%88%87%E6%8D%A2/feed.xml" rel="self" type="application/rss+xml"/><item><title>随笔-JDK版本的切换</title><link>https://ole12138.gitee.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/%E9%9A%8F%E7%AC%94-jdk%E7%89%88%E6%9C%AC%E7%9A%84%E5%88%87%E6%8D%A2/</link><pubDate>Mon, 11 Jan 2021 18:11:08 +0800</pubDate><guid>https://ole12138.gitee.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/%E9%9A%8F%E7%AC%94-jdk%E7%89%88%E6%9C%AC%E7%9A%84%E5%88%87%E6%8D%A2/</guid><description>JDK版本的切换 有时为了使用新一点的API，项目需要使用高版本的JDK，比如JDK8切换到JDK11.
+有时为了维护旧项目，需要使用旧版本的JDK，比如JDK8切换到JDK7.
+这就需要安装和切换对应的JDK
+安装对应版本的JDK 一般我们使用Java SE版本。Linux自带的是openJDK，windows下我们一般使用Oracle 的JDK。
+下载安装过程略。
+IDEA中切换SDK 我们的项目一般都是在IDE工具中开发的。Java典型的IDE是intellij IDEA。
+在IDEA中打开对应的项目。作如下操作：
+File-&amp;gt;Project Structure-&amp;gt;SDKs-&amp;gt;点&amp;quot;+&amp;ldquo;号新建一个JDK，JDK所在目录选定前面JDK的安装目录。
+这样，项目就会使用对应的JDK。
+若已经按之前的JDK版本打开/导入了项目，为了使新的JDK生效，还需要做如下操作：
+File-&amp;gt;Project Structure-&amp;gt;Modules-&amp;gt;点击右侧Dependencis选项卡-&amp;gt;Module SDK选择刚刚新建的那个JDK
+Maven中切换compiler版本 我们一般是使用Maven构建程序的。
+打开Maven要用到的pom文件，编译插件部分作如下修改：
+&amp;lt;plugin&amp;gt; &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.5.1&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;source&amp;gt;11&amp;lt;/source&amp;gt; &amp;lt;target&amp;gt;11&amp;lt;/target&amp;gt; &amp;lt;!--&amp;lt;release&amp;gt;11&amp;lt;/release&amp;gt;--&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt; 最终，运行maven编译通过。</description></item></channel></rss>
