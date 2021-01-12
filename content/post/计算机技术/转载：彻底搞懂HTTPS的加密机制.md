@@ -9,7 +9,7 @@ series:
 - HTTPS
 tags:
 - HTTP
-- https
+- HTTPS
 - ssl
 - tls
 ---
