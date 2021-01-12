@@ -1,11 +1,12 @@
 ---
-title: "转载：HTTP协议入门"
+title: "HTTP协议介绍(转载)"
 date: 2021-01-10T18:52:09+08:00
 draft: false
 categories: 
 - HTTP
 series:
 - HTTP
+- java发起http请求
 tags:
 - HTTP1.1
 - HTTP2
