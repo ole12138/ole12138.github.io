@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>身份认证 on Jingmin's blog</title><link>https://ole12138.gitee.io/tags/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81/</link><description>Recent content in 身份认证 on Jingmin's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Copyright (c) 2020, Jingmin; All rights reserved.</copyright><lastBuildDate>Wed, 13 Jan 2021 20:23:43 +0800</lastBuildDate><atom:link href="https://ole12138.gitee.io/tags/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81/feed.xml" rel="self" type="application/rss+xml"/><item><title>HTTP认证方式</title><link>https://ole12138.gitee.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/http%E8%AE%A4%E8%AF%81%E6%96%B9%E5%BC%8F/</link><pubDate>Wed, 13 Jan 2021 20:23:43 +0800</pubDate><guid>https://ole12138.gitee.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/http%E8%AE%A4%E8%AF%81%E6%96%B9%E5%BC%8F/</guid><description>HTTP认证方式 本节参考： https://zhuanlan.zhihu.com/p/64584734 https://www.loginradius.com/blog/async/everything-you-want-to-know-about-authorization-headers/ https://www.cnblogs.com/xiongmaomengnan/p/6671206.html https://www.jianshu.com/p/cf5a900d4ef7
+B/S和C/S形式的远程通信，一般都是基于HTTP和RFC的方式进行的。今天说一下HTTP通信过程中的身份认证。
+服务器上的资源，并不都是公开的。某些资源的访问需要具有一定的权限才可以。
+HTTP/1.0中在http头中引入了权限（Authorization）字段。
+Basic Auth 最初的认证是简单认证，在HTTP报文（头部）中是这样的
+Authorization: Basic &amp;lt;username:password的base64加密结果&amp;gt; 像这样：
+Authorization: Basic AXVubzpwQDU1dzByYM== 但是HTTP报文在网络上是有可能被截获的，而base64加密过的结果，也很容易解密，从而导致用户名和密码被其他人获取。
+Bearer Token 为了减少（加密过的）用户名和密码在网络上传递的次数，降低被盗用的风险， 可在简单认证通过后，服务器返回一个token。之后访问服务器需要权限的资源就不再使用（加密过的）用户名和密码，而是使用token。
+可以把这个token放到HTTP报文头部，像这样的形式：
+Authorization: Bearer &amp;lt;token&amp;gt; API Key 类似于Bearer Token，客户端调用服务器API时，常常需要携带token，一般叫做API Key。
+常见的调用形式：
+GET /endpoint?api_key=abcdefgh123456789 也常常将API Key放置到HTTP头部：
+X-API-Key: abcdefgh123456789 Digest Auth Digest认证试图解决Basic认证的缺陷而设计，用户密码并没有在网络上传递，传递的是密码（和账号等其他几个参数）的hash值。而通过hash值破解出密码一般认为是不现实的。
+摘要认证的一个改进之处是用摘要代替密码的传输，遵循的基本原则是“绝对不通过网络发送明文密码”，而是发送一个密码的摘要信息，并且这摘要信息是不可逆的，即无法通 过摘要信息反推出密码信息
+客户端向服务器请求认证的过程：
+客户端发起请求 服务返回401未认证， 并要求使用Digest认证， 并提供一个随机串nonce，以及支持的hash算法 客户端计算： hash(nonce+账号+密码)， 并将hash结果和账号名发送给服务器 服务器根据账号名，找到对应的账户信息， 同样计算hash(nonce+账号+密码)， 对比计算的hash值与客户端传回的hash值， 对比通过即可将原来客户端请求的资源发送给客户 摘要认证的一个改进之处可以防止重放攻击。摘要被截获也可能跟密码一起好用，为了防止重放攻击的发送，服务器可以向客户端发送一个称为随机数nonce的特殊令牌，这个数会经常发生变化(可能是每毫秒，或者每次认证都发生变化，具体由服务器控制)，客户端在计算摘要之前要先将这个随机数附加到密码上去。这样，在密码中加入随机数就会使得摘要随着随机数的每次变化而变化，记录下的密码摘要只对特定的随机数有效，而没有密码的话，攻击者就无法计算出正确的摘要，这样就可以防止重放攻击的发生。
+但是，摘要认证并不能防止中间人攻击。即客户端的请求直接被中间人拦截，中间人拿着客户端的请求信息去请求服务器。实际上HTTP都不能解决中间人攻击问题，需要HTTPS才可以解决。
+当前常用的认证方式（会话级别：登录认证） 本章节非原创，转载来源：https://www.cnblogs.com/fengzheng/p/8416393.html
+场景说明 以一个电商系统，假设淘宝为例，如果我们想要下单，首先需要注册一个账号。拥有了账号之后，我们需要输入用户名（比如手机号或邮箱）、密码完成登录过程。之后如果你在一段时间内再次进入系统，是不需要输入用户名和密码的，只有在连续长时间不登录的情况下（例如一个月没登录过）访问系统，再次需要输入用户名和密码。如果使用频率很频繁，通常是一年都不用再输一次密码，所以经常在换了一台电脑或者一部手机之后，一些经常使用的网站或 APP 不记得密码了。
+提炼出来整个过程大概就是如下几步：
+首次使用，需要通过邮箱或手机号注册； 注册完成后，需要提供用户名和密码完成登录； 下次再使用，通常不会再次输入用户名和密码即可直接进入系统并使用其功能（除非连续长时间未使用）； OAuth 认证 OAuth 认证比较常见的就是微信登录、微博登录、qq登录等，简单来说就是利用这些比较权威的网站或应用开放的 API 来实现用户登录，用户可以不用在你的网站或应用上注册账号，直接用已有的微信、微博、qq 等账号登录。</description></item></channel></rss>
