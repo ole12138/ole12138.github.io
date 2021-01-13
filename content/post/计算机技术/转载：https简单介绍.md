@@ -112,3 +112,9 @@ HTTPS是在通信接口部分用 TLS(Transport Layer Security 传输层安全性
 # 网站使用HTTPS
 
 //TODO
+
+https://blog.csdn.net/wjskeepmaking/article/details/79177438
+
+https://blog.csdn.net/ithomer/article/details/78075006
+
+https://www.cnblogs.com/fron/p/https-20170111.html

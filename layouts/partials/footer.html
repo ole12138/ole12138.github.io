@@ -2,6 +2,10 @@
 {{ partial "math.html" . }}
 {{ end }}
 
+{{ if or .Params.mermaid .Site.Params.mermaid }}
+{{ partial "mermaid.html" . }}
+{{ end }}
+
 {{ $baseUrl := .Site.BaseURL }}
 <hr />
 

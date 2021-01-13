@@ -5,6 +5,7 @@ draft: false
 categories: 
 - 计算机技术
 tags:
+mermaid: true
 ---
 
 # Java开发技能需求（待掌握技能）
@@ -66,4 +67,8 @@ java发起Http请求-apache的HttpClient							:crit,httpClient,after restTempla
 java发起Http请求-HttpUrlConnection					:done,2021-01-10,1d
 java发起Http请求-OkHttp								:active,1d
 ```
+
+
+
+
 
