@@ -1,5 +1,5 @@
 ---
-title: "SpringMVC工作流程与使用（转载）"
+title: "SpringMVC工作流程与使用方式（转载）"
 date: 2021-01-16T22:32:10+08:00
 draft: false
 categories: 
@@ -23,7 +23,7 @@ tags:
 - 拦截器
 ---
 
-# SpringMVC工作流程与使用（转载）
+# SpringMVC工作流程与使用方式（转载）
 
 本文非原创，转载来源：https://juejin.cn/post/6844904031807094798#heading-47
 
