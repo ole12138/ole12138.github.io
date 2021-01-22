@@ -82,6 +82,7 @@ java -jar xxx.jar
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-dependency-plugin</artifactId>
+    <version>3.1.2</version>
     <executions>
         <execution>
             <id>copy-dependencies</id>
