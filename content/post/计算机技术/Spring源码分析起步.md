@@ -3,9 +3,9 @@ title: "Spring源码分析起步"
 date: 2021-01-21T12:01:24+08:00
 draft: false
 categories: 
+- Spring
 tags:
-markup: pandoc
-math: true
+- Spring源码
 ---
 
 # Spring源码分析起步
@@ -179,3 +179,5 @@ implements ConfigurableApplicationContext {
 [Spring源码分析-归田](https://juejin.cn/post/6844903593879797768)
 
 [Spring源码分析-陈彦斌](https://www.cnblogs.com/chenyanbin/p/11756034.html)
+
+[Spring 加载 *.properties 文件的源码分析](https://blog.csdn.net/dalinsi/article/details/53037957)
