@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>委派模式 on Jingmin's blog</title><link>https://ole12138.gitee.io/tags/%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%BC%8F/</link><description>Recent content in 委派模式 on Jingmin's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Copyright (c) 2020, Jingmin; All rights reserved.</copyright><lastBuildDate>Sat, 30 Jan 2021 15:12:16 +0800</lastBuildDate><atom:link href="https://ole12138.gitee.io/tags/%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%BC%8F/feed.xml" rel="self" type="application/rss+xml"/><item><title>Java设计模式之委派模式与模板模式（转载）</title><link>https://ole12138.gitee.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%BC%8F%E4%B8%8E%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F%E8%BD%AC%E8%BD%BD/</link><pubDate>Sat, 30 Jan 2021 15:12:16 +0800</pubDate><guid>https://ole12138.gitee.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%BC%8F%E4%B8%8E%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F%E8%BD%AC%E8%BD%BD/</guid><description>Java设计模式之委派模式与模板模式（转载） 博文非原创，转载来源：https://zhuanlan.zhihu.com/p/113108459
+委派模式 定义 委派模式(Delegate Pattern ) 又叫委托模式， 是一种面向对象的设计模式， 允许对象组合实现与 继承相同的代码重用。它的基本作用就是负责任务的调用和分配任务， 是一种特殊的静态代理， 可以理 解为全权代理， 但是代理模式注重过程，而委派模式注重结果。委派模式属于行为型模式， 不属于GO F 23 种设计模式中。
+委派模式的应用场景 委派模式在 Spring 中应用非常多 ， 大家常用的 DispatcherServlet 其实就是用到了委派模式。先来看一下类图：
+从类图中我们可以看到， 委派模式有三个参与角色：
+抽象任务角色( Task ) : 定义一个抽象接口， 它有若干实现类。
+委派者角色( Delegate ) : 负责在各个具体角色实例之间做出决策并判断并调用具体实现的方法。
+具体任务角色( Concrete ) 真正执行任务的角色。
+现实生活中也室有委派的场景发生，例如：老板( Boss ) 给项目经理( Leader ) 下达任务，项目经 理会根据实际情况给每个员工派发工作任务， 待员工把工作任务完成之后， 再由项目经理汇报工作进度 和结果给老板。
+委派模式在业务场景中的应用 我们用代码来模拟下这个业务场景 ， 创建 IEmployee员工接口 ：
+public interface IEmployee { void doing(String task); } 创建员工 EmployeeA 类：</description></item></channel></rss>
